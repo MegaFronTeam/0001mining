@@ -1,30 +1,21 @@
 // start .sDelivery
 .sDelivery {
 	--sPT: #{rem(0)};
-	// --sPB: #{rem()};
+	--sPB: #{rem(0)};
 	--sTPB: #{rem(38)};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-
-	}
-	.section-title{
-		
-	}
 	h2{
-		// margin-bottom: 38px;
 		font-family: $font-family-monospace;
-		font-size: rem(33);
+		font-size: rem(18);
 		font-weight: 600;
-	}
-	&__col{
-
 	}
 	&__item{
 		margin-bottom: rem(35);
 		font-family: $default-font;
 		&:last-child {
-			margin-bottom: rem(90);
+			margin-bottom: rem(50);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(90);
+			}
 		}
 		h3 {
 			font-size: rem(17);
@@ -33,11 +24,16 @@
 			line-height: 147%;
 		}
 		p {
-			font-size: rem(16);
+			font-size: rem(14);
 			font-weight: 300;
 			line-height: 156%;
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+			}
 		}
 	}
+
+	
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
