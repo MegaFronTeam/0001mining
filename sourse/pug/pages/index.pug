@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sWorkForYou/_sWorkForYou.pug
+include ../blocks/sProfit/_sProfit.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sStories/_sStories.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sLease/_sLease.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sForm/_sForm.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	//- a(data-fancybox data-type="ajax" href="modal/test.html") тест
+	main
+		+headerBlock 
+		+sIcons
+		+sWorkForYou
+		+sCatalog
+		+sProfit
+		+sAbout
+		+sIcons2
+		+sCatalog
+		+sStories
+		+sRews
+		+sFAQ
+		+sLease
+		+sCatalog
+		+sForm
+	+parts('footer')
+      
+
+
+

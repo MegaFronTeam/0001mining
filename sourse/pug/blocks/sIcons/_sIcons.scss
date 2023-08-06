@@ -1,0 +1,55 @@
+// start .sIcons
+.sIcons {
+	// --sPT: #{rem(600)};
+	// --sPB: #{rem(60)};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var( --bs-gutter-x);
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sIcons
+.icon-item{
+	padding: rem(30);
+	border-radius: rem(25px);
+	border: 1px solid #D5DFDF;
+	min-height: 100%;
+	.row{
+		--bs-gutter-x: 17px;
+		
+	}
+	&__img-wrap{
+		width: 60px;
+		margin-bottom: rem(16);
+		min-height: rem(60);
+		img{
+			@extend .res-i;
+		}
+	}
+	&__title{
+		font-size: rem(19);
+		font-weight: 500;
+	}
+	p{
+		font-size: rem(17);
+		font-weight: 300;
+		line-height: 124.688%; /* 21.197px */
+	}
+}

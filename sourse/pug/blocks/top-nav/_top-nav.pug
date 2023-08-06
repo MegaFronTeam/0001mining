@@ -1,0 +1,99 @@
+mixin menu-toggle()
+	+b.toggle-menu-mobile--js.d-md-none
+		span
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+btn()
+			+mnu()
+			
+	//  мобильное меню
+mixin btn()
+	+e.btn--catalog.btn.btn-outline-primary(href="#")
+		+iconC("menu")
+		| Каталог
+mixin upmenu()
+	ul
+		li: a(href="#")  Оплата и доставка
+		li: a(href="#")  О компании
+		li: a(href="#")  Блог
+		li: a(href="#")  Сервис
+		li: a(href="#")  Контакты
+mixin btns(mob)
+	if mob
+		.top-nav__search-btn-col.col-auto.d-xl-none&attributes(attributes)
+			+e.btn--icon.btn.btn-outline-light(href="#") 
+				+icon("search")
+	else
+		.top-nav__search-btn-col.col-auto.d-xl-none&attributes(attributes)
+			+e.btn--icon.--search-toggle-js.btn.btn-outline-light(type='button') 
+				+icon("search")
+
+	.col-xl-auto.col&attributes(attributes)
+		.btn-group
+			+e.btn--icon.btn.btn-outline-light(href="#")
+				+icon("like")
+			+e.btn--icon.btn.btn-outline-light(href="#")
+				+e.count 2 
+				+icon("compare")
+			
+mixin btn-soc()
+	+e.soc-btns.btn-group
+		+e.btn--icon.btn.btn-outline-light(href="#")
+			+icon("like")
+		+e.btn--icon.btn.btn-outline-light(href="#") 
+			+icon("compare")
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			+b.up-menu.d-none.d-md-block
+				+upmenu()
+			+e.inner
+				.row
+					.col-md-auto.col
+						+b.logo(href="/")
+							include logo.svg
+							+e.caption
+								+e.title 
+									+iconC("logotext")
+								+e.text Все для майнинга
+					.col-auto.d-none.d-md-block
+						+btn()
+					+e.search-col.col-xl.col-12.order-xl-0.order-last.d-none.d-md-block
+						+search()
+					
+					+btns().d-none.d-md-block
+					+e.contacts-col.col-auto.text-xl-start.text-end
+						
+						+e.tel(href="+7(499)-719-55-88").text-body + 7(499)-719-55-88
+						br
+						+e.link.tdu(data-fancybox data-type="ajax" href="modal/call.html").text-body Заказать звонок
+					.col-auto.d-none.d-md-block
+						+btn-soc()
+					.col-auto.d-md-none
+						+menu-toggle()
+
+			.menu-mobile.menu-mobile--js
+				.menu-mobile__inner
+					+menu-toggle()
+					+e.head-row.row.d-md-none
+						.col
+							+btn()
+						+btns('m')
+					+mnu()
+					.d-md-none
+						+upmenu()
+						+btn-soc()
+	// end top-nav

@@ -1,0 +1,84 @@
+
+:root {
+	--animate-delay: 1.2s;
+	
+	--bs-body-font-size: 14px;
+	@include media-breakpoint-up(md) {
+		
+		--bs-body-font-size: #{$em-base};
+	}
+	--sPT: #{rem(60)};
+	--sPB: #{rem(60)};
+	--sTPB: #{rem(40)};
+
+	// --sPT: #{rem(80 * .5)};
+	// --sPB: #{rem(90 * .5)};
+	// --sTPB: #{rem(40 * .5)};
+
+
+	--fancybox-content-color: var(--bs-body-color);
+		--swiperArrowSize: #{rem(68)};
+		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+		--swiperBorderColorDef: var(--bs-primary);
+		--swiperColorDef: var(--bs-primary);
+		--swiperBgDef: #ffffff;
+	
+		--swiperBorderColorDefHover: var(--bs-primary);
+		--swiperColorDefHover: var(--bs-primary);
+		--swiperBgDefHover: #ffffff;
+
+		--chevron-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='12' viewBox='0 0 7 12' fill='none'%3E%3Cpath d='M0 1.04293L1.0677 0L7 5.83333L1.0617 11.6667L0 10.6237L4.87661 5.83333L0 1.04293Z' fill='#{$primary}'/%3E%3C/svg%3E");
+
+		--checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='15' viewBox='0 0 21 15' fill='none'%3E%3Crect x='1.84766' y='5.52039' width='10.7913' height='2.61493' transform='rotate(45 1.84766 5.52039)' fill='%2347B0FF'/%3E%3Crect x='6.66406' y='12.2714' width='17.3544' height='2.61493' transform='rotate(-45 6.66406 12.2714)' fill='%2347B0FF'/%3E%3C/svg%3E");
+		
+		
+		
+	  //  --carousel-button-width: 48px;
+	  //  --carousel-button-height: 48px;
+		
+	  //  --carousel-button-svg-width: 24px;
+	  //  --carousel-button-svg-height: 24px;
+		
+	  //  --carousel-button-svg-stroke-width: 2.5;
+	  //  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+	}
+	.fancybox__container{
+		
+		--fancybox-bg: linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.80) 100%);
+}
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+//
+@include media-breakpoint-between(md, xl) {}
+
+
+//
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+//
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+

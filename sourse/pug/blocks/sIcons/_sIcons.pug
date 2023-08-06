@@ -1,0 +1,31 @@
+mixin i-item(i,p,t)
+	+e.col.col.col-xl.col-md-4.col-sm-6.col-12&attributes(attributes)
+		+b.icon-item
+			.row
+				+e.img-wrap.col-sm-12.col-auto
+					+img(`img/icon-${i}.png`)
+				+e.caption.col
+					if t
+						+e.title!= t
+					p!= p
+mixin sIcons(data)
+	// start sIcons
+	+b.sIcons.section#sIcons&attributes(attributes)
+		.container
+			+e.row.row
+				+i-item(`1`,`Помогаем с&nbsp;выбором  и&nbsp;оплатой`)
+				+i-item(`2`,`Доставляем в&nbsp;дата-центр в&nbsp;Красноярске`)
+				+i-item(`3`,`Настраиваем и&nbsp;проверяем все&nbsp;ли впорядке`)
+				+i-item(`4`,`Поддерживаем  круглый год 24/7`)
+				+i-item(`5`,`Оперативно ремонтируем, если что-то пошло не&nbsp;так`)
+	// end sIcons
+mixin sIcons2(data)
+	// start sIcons
+	+b.sIcons.section#sIcons&attributes(attributes)
+		.container
+			+e.row.row
+				+i-item(`6`,`Вход только по&nbsp;пропускам, видеонаблюдение 24/7`,'Безопасность').col-md-6
+				+i-item(`7`,`Благодаря защите от&nbsp;перегрева машины дольше служат`,`Промышленная вентиляция  и&nbsp;охлаждение`).col-md-6
+				+i-item(`8`,`Никаких простоев: энергохолдинг официально и&nbsp;бесперебойно подаёт электричество`,'Аптайм 99%').col-md-6
+				+i-item(`9`,`Специалисты всегда на&nbsp;объекте и&nbsp;реагируют на&nbsp;неполадки даже ночью`,'Круглосуточный мониторинг').col-md-6
+	// end sIcons
