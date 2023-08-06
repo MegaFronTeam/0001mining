@@ -1,0 +1,49 @@
+// start .sDelivery
+.sDelivery {
+	--sPT: #{rem(0)};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(38)};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	h2{
+		// margin-bottom: 38px;
+		font-family: $font-family-monospace;
+		font-size: rem(33);
+		font-weight: 600;
+	}
+	&__col{
+
+	}
+	&__item{
+		margin-bottom: rem(35);
+		font-family: $default-font;
+		&:last-child {
+			margin-bottom: rem(90);
+		}
+		h3 {
+			font-size: rem(17);
+			font-style: normal;
+			font-weight: 500;
+			line-height: 147%;
+		}
+		p {
+			font-size: rem(16);
+			font-weight: 300;
+			line-height: 156%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sDelivery

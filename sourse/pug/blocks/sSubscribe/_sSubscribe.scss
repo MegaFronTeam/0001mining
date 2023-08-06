@@ -1,0 +1,53 @@
+// start .sSubscribe
+.sSubscribe {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(110)};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__wrap {
+		padding: 37px;
+		border-radius: 15px;
+		background-image: url('../img/subscription-bg.jpg');
+		background-size: cover;
+	}
+	&__text {
+		color: $white;
+		p {
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 144.3%;
+		}
+	}
+	h2 {
+		font-size: rem(42);
+		font-weight: 700;
+		letter-spacing: -0.42px;
+	}
+	&__btn {
+		padding: 20px 28px;
+		margin-bottom: 23px;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSubscribe
