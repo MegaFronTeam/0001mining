@@ -1,0 +1,27 @@
+mixin sDelivery(data)
+	// start sDelivery
+	+b.SECTION.sDelivery.section#sDelivery&attributes(attributes)
+		.container
+			+e.item-wrap
+				+b.section-title
+					h2 Способы оплаты
+				+e.item
+					h3 Наличный расчет
+					p Самый распространенный способ оплаты. Вы&nbsp;рассчитываетесь с&nbsp;сотрудником службы доставки или приезжаете к&nbsp;нам в&nbsp;офис. Оплата и&nbsp;доставка в&nbsp;регионы обговариваются индивидуально с&nbsp;менеджером
+				+e.item
+					h3 Банковские карты
+					p Вы&nbsp;можете оплатить покупки или услуги банковской картой при получении, либо у&nbsp;нас в&nbsp;офисе
+				+e.item
+					h3 Безналичный расчет
+					p При оформлении заказа на&nbsp;юридическое лицо с&nbsp;НДС&nbsp;/ без НДС
+			+e.item-wrap
+				+b.section-title
+					h2 Способы доставки
+				+e.item
+					h3 Деловые линии
+					p Доставка осуществляется до&nbsp;пункта выдачи в&nbsp;Вашем городе. Отследить заказ можно по&nbsp;номеру накладной #[a(href='https://dellin.ru' class='tdu text-body') https://dellin.ru]
+				+e.item
+					h3 СДЭК
+					p Доставка осуществляется до&nbsp;пункта выдачи в&nbsp;Вашем городе. Отследить заказ можно по&nbsp;номеру накладной  #[a(href='https://www.cdek.ru/track.html' class='tdu text-body') https://www.cdek.ru/track.html]
+					p Стоимость отправления рассчитывается индивидуально нашим менеджером при оформлении заказа
+	// end sDelivery
