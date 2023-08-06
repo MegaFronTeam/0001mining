@@ -2,8 +2,20 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+			+e.wrap
+				+b.section-title
+					h2 Контакты
+				+e.item--addr
+					+e.item-name Офис
+					+e.item-def г. Москва, Очаковское шоссе, 34
+				+e.item--tel
+					+e.item-name Телефон
+					+e.item-def.text-body.A(href='tel:74997195588') + 7(499)-719-55-88
+				+e.item--mail
+					+e.item-name E-mail
+					+e.item-def.text-body.A(href='mailto:sales@mining-depot.ru') sales@mining-depot.ru
+				+e.social
+					+soc
+				+e.map
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad698a64bde719663129f7bdb736d91e183411a051b39c1bd4a121135bfdd3712&amp;source=constructor" width="900" height="500" frameborder="0"></iframe>
 	// end sContact

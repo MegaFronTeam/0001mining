@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Доставка и оплата</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Доставка и оплата</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<h1>Доставка и оплата</h1>
+					</div>
+				</div>
+				<!-- start sDelivery-->
+				<section class="sDelivery section" id="sDelivery">
+					<div class="container">
+						<div class="sDelivery__item-wrap">
+							<div class="section-title">
+								<h2>Способы оплаты</h2>
+							</div>
+							<div class="sDelivery__item">
+								<h3>Наличный расчет</h3>
+								<p>Самый распространенный способ оплаты. Вы&nbsp;рассчитываетесь с&nbsp;сотрудником службы доставки или приезжаете к&nbsp;нам в&nbsp;офис. Оплата и&nbsp;доставка в&nbsp;регионы обговариваются индивидуально с&nbsp;менеджером</p>
+							</div>
+							<div class="sDelivery__item">
+								<h3>Банковские карты</h3>
+								<p>Вы&nbsp;можете оплатить покупки или услуги банковской картой при получении, либо у&nbsp;нас в&nbsp;офисе</p>
+							</div>
+							<div class="sDelivery__item">
+								<h3>Безналичный расчет</h3>
+								<p>При оформлении заказа на&nbsp;юридическое лицо с&nbsp;НДС&nbsp;/ без НДС</p>
+							</div>
+						</div>
+						<div class="sDelivery__item-wrap">
+							<div class="section-title">
+								<h2>Способы доставки</h2>
+							</div>
+							<div class="sDelivery__item">
+								<h3>Деловые линии</h3>
+								<p>Доставка осуществляется до&nbsp;пункта выдачи в&nbsp;Вашем городе. Отследить заказ можно по&nbsp;номеру накладной <a class="tdu text-body" href="https://dellin.ru">https://dellin.ru</a></p>
+							</div>
+							<div class="sDelivery__item">
+								<h3>СДЭК</h3>
+								<p>Доставка осуществляется до&nbsp;пункта выдачи в&nbsp;Вашем городе. Отследить заказ можно по&nbsp;номеру накладной  <a class="tdu text-body" href="https://www.cdek.ru/track.html">https://www.cdek.ru/track.html</a></p>
+								<p>Стоимость отправления рассчитывается индивидуально нашим менеджером при оформлении заказа</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sDelivery-->
+				<!-- start sSubscribe-->
+				<section class="sSubscribe section" id="sSubscribe">
+					<div class="container">
+						<div class="sSubscribe__wrap">
+							<div class="sSubscribe__row row">
+								<div class="col-xl-6"></div>
+								<div class="sSubscribe__text col-xl-6">
+									<h2>Подпишитесь на&nbsp;Telegram</h2>
+									<p>Обзор майнинга в&nbsp;России, актуальные кейсы, скидки и&nbsp;акции от&nbsp;Mining Depot</p>
+									<a class="sSubscribe__btn btn btn-white" href="#">Подписаться на канал
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sSubscribe-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

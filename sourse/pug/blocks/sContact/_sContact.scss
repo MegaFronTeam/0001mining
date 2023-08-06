@@ -1,25 +1,115 @@
 
 	// start .sContact
 	.sContact {
-	// --sPT: #{rem()};
+	--sPT: #{rem(0)};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(0)};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
+	&__wrap {
+		display: block;
+		@include media-breakpoint-up(md) {
+			display: grid;
+			grid-template-columns: auto auto;
+			grid-template-rows: repeat(4, auto);
+			gap: 30px;
+		}
+		@include media-breakpoint-up(lg) {
+			grid-template-columns: auto 60%;
+			grid-template-rows: repeat(5, 1fr);
+		}
+	}
 	.section-title{
-		
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+		@include media-breakpoint-up(lg) {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+	}
+	h2 {
+		margin-bottom: 38px;
+		color: #000;
+		font-family: $font-family-monospace;
+		font-size: rem(32);
+		font-weight: 600;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+			font-size: rem(50);
+		}
 	}
 	&__col{
 
 	}
 	&__item{
-
+		margin-bottom: 37px; 
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+		a:hover {
+			color: $primary;
+		}
+		&--addr {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			// @include media-breakpoint-up(lg) {
+			// 	grid-column: 1 / 2;
+			// 	grid-row: 2 / 3;
+			// }
+		}
+		&--tel {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+			@include media-breakpoint-up(lg) {
+				grid-column: 1 / 2;
+				grid-row: 3 / 4;
+			}
+		}
+		&--mail {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+			@include media-breakpoint-up(lg) {
+				grid-column: 1 / 2;
+				grid-row: 4 / 5;
+			}
+		}
 	}
-	&__slide{
-		height: auto;
+	&__item-name {
+		margin-bottom: 10px;
+		color: $gray-500;
+		font-size: rem(18);
+		font-weight: 300;
+	}
+	&__item-def {
+		font-size: 20px;
+		font-weight: 500;
+	}
+	&__social {
+		grid-column: 2 / 3;
+		grid-row: 3 / 4;
+		align-self: end;
+		margin-bottom: 65px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			grid-column: 1 / 2;
+			grid-row: 5 / 6;
+			align-self: center;
+		}
+	}
+	&__map {
+		grid-column: 1 / 3;
+		grid-row: 4 / 5;
+		border-radius: 15px;
+		overflow: hidden;
+		@include media-breakpoint-up(lg) {
+			grid-column: 2 / 3;
+			grid-row: 1 / 6;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
