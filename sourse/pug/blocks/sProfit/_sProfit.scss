@@ -3,13 +3,27 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	position: relative;
+	z-index: 3;
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 
 	}
 	.section-title{
-		
+		position: relative;
+		z-index: 2;
+		img{
+			@include media-breakpoint-up(xl) {
+
+				position: absolute;
+				z-index: -1;
+				right: -60px;
+				top: 0;
+			}
+			@extend .res-i;
+		}	
+
 	}
 	&__col{
 
@@ -17,12 +31,88 @@
 	&__item{
 
 	}
+	&__inner{
+		color: #fff;
+		@include media-breakpoint-up(sm)  {
+			border-radius: 25px;
+		}
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(xl) {
 
+				padding: rem(95) rem(90);
+			}
+		@include media-breakpoint-up(sm){
+			padding: rem(95) rem(30);
+		}
+		padding: rem(60) rem(20);
+		h2{
+			max-width: rem(730);
+			margin-bottom: rem(40);
+			@extend .mono;
+		}
+		
+		&::before{
+			content: '';
+			@include a-cent;
+			z-index: -1;
+			opacity: 0.8;
+			background-image: url(../img/profit-bg.jpg);
+			z-index: -1;
+			@include bgs;
+			@include media-breakpoint-up(sm) {
+				border-radius: 25px;
+			}
+		}
+		p{
+			max-width: rem(630);
+			font-size: rem(19);
+			font-weight: 300;
+		}
+	}
+	.btn{
+		width: 100%;
+		max-width: rem(272);
+		margin-top: rem(40);
+	}
+	table{
+		width: 100%;
+		margin-top: rem(40);
+		font-size: rem(14);
+	}
+	td{
+		border-bottom: 1px solid ;
+		padding-bottom: 12px;
+		padding-top: 12px;
+		&:nth-child(1){
+			font-weight: 300;
+		}
+		&:nth-child(2){
+			font-weight: bold;
+			text-align: right;
+			padding-left: 20px;
+			white-space: nowrap;
+		}
+	}
+	tr:last-child{
+		td{
+			font-weight: 500;
+			&:nth-child(2){
+				font-weight: 700;
+				font-size: rem(18);
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		.container{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 } // end.sProfit

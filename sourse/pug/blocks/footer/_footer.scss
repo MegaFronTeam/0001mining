@@ -1,14 +1,21 @@
 .footer {
-		
+		background: #eef0f0;
 	margin-top: auto;
 // --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	&__row{
-		// --bs-gutter-x: #{rem()};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(43)};
+		}
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
+	font-weight: 300;
+	font-size: rem(17);
+		a{
+			color: $body-color;
+		}
 	.section-title{
 		
 	}
@@ -20,6 +27,65 @@
 	}
 	&__slide{
 		height: auto;
+	}
+	&__logo{
+		filter: grayscale(1);
+		@include media-breakpoint-up(xl){
+			margin-right: 80px;
+		}
+	}
+	ul{
+		list-style: none;
+	}
+	.columns-1{
+		a{
+			color: #6D6D6D;
+			font-size: rem(15);
+		}
+	}
+	.columns-2{
+		ul{
+			@include media-breakpoint-up(lg) {
+				columns: 2;
+			}
+		}
+		li{
+			margin-bottom: 5px;
+			font-size: rem(15);
+			@include media-breakpoint-up(sm) {
+
+				font-size: rem(17);
+			}
+
+		}
+	
+	}
+	.top-nav__tel{
+		font-size: rem(21);
+	}
+	.top-nav__link{
+		font-size: rem(17);
+	}
+	p{
+		margin-top: 20px;
+		font-size: rem(15);
+		a{
+			@extend .tdu;
+		}
+	}
+	&__policy{
+		padding-top: rem(30);
+		padding-bottom: rem(30);
+		color: #6D6D6D;
+		border-top: 1px solid #E1E1E1;
+		margin-top: rem(48);
+		@include media-breakpoint-down(sm)  {
+			font-size: 12px;
+		}
+		a{
+			color: #6D6D6D;
+			@extend .tdu;
+		}
 	}
 // 
 @include media-breakpoint-up(xl) {}

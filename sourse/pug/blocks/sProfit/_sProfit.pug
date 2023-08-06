@@ -2,8 +2,26 @@ mixin sProfit(data)
 	// start sProfit
 	+b.SECTION.sProfit.section#sProfit&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sProfit
-				
-			+e.row.row
+			+e.inner
+				+b.section-title
+					h2 Доходность инвестиций в&nbsp;майнинг &mdash;&nbsp;около&nbsp;70% годовых
+					p Это в&nbsp;5&nbsp;раз больше, чем доход от&nbsp;вложений в&nbsp;недвижимость и&nbsp;в&nbsp;10&nbsp;раз больше, чем доход по&nbsp;накопительному счёту.
+
+					p Блокчейн-технологии могут стать главным инструментом для заработка. Мы&nbsp;подберём решение, которое позволит чувствовать себя уверенно в&nbsp;условиях экономической нестабильности.
+					+e.btn.btn.btn-white(href="#") Изучить подробности 
+					.d-none.d-sm-block
+						img(src="../img/graf.png", alt="")
+					.d-sm-none
+						table
+							mixin tr(t1,t2)
+								tr&attributes(attributes)
+									td!= t1
+									td!= t2
+							+tr(`Банковские вклады  и&nbsp;накопительные счета`,`7-8% годовых`)
+							+tr(`Недвижимость`,`5-13% годовых`)
+							+tr(`Акции`,`20-25% годовых`)
+							+tr(`Бизнес и производство`,`15-35% годовых`)
+							+tr(`Валютный рынок`,`20-35% годовых`)
+							+tr(`Добыча криптовалюты`,`70% годовых`)
+								
 	// end sProfit

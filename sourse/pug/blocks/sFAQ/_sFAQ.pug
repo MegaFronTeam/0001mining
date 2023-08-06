@@ -2,8 +2,18 @@ mixin sFAQ(data)
 	// start sFAQ
 	+b.SECTION.sFAQ.section#sFAQ&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sFAQ
-				
-			+e.row.row
+			+b.section-title
+				h3 FAQ - ответы на популярные вопросы
+			mixin item(t)
+				+e.item
+					+e.head.dd-head-js!= t
+					+e.body 
+						p Мы можем доставить оборудование до нужного вам адреса, а также до пункта выдачи «Деловых линий» или «СДЭК» в вашем городе. 
+			+item(`Вы доставляете оборудование только в дата-центр в Красноярске?`)
+			+item(`Когда доставят мой майнер?`)
+			+item(`Как мне оплатить заказ?`)
+			+item(`Есть ли гарантия на майнеры?`)
+			+item(`Если появятся вопросы, вы мне поможете?`)
+			+item(`А майнер точно окупится?`)
+
 	// end sFAQ

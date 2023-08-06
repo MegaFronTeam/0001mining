@@ -3,19 +3,42 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+	.row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
+		align-items: flex-end;
+	}
+	.container  {
+		border-bottom: 1px solid $light;
 	}
 	.section-title{
-		
+		@include media-breakpoint-up(xl) {
+		text-wrap: inherit;
+		}
+		@include media-breakpoint-up(sm) {
+			
+			position: relative;
+			padding-right: rem(230 + 90);
+		}
+		img{
+			@include media-breakpoint-up(sm) {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+			max-width: 100%;
+			height: auto; 
+			}
 	}
 	&__col{
 
 	}
 	&__item{
 
+	}
+	.btn{
+		width: 100%;
+		max-width: rem(230) ;
 	}
 
 	@include media-breakpoint-up(xl) {}

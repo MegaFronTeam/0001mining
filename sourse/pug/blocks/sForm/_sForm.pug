@@ -2,15 +2,17 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+			+b.form-wrap 
+				picture
+					source(media="(min-width: 1200px)", srcset="img/form-img.png") 
+					+img('img/form-img-mob.png')
+				+e.row.row
+
+					+b.section-title.col
+						h2 Подпишитесь на e-mail рассылку новостей
+						p Обзор майнинга в России, актуальные кейсы, скидки  и акции от Mining Depot
+					.col-md-auto
+						form
+							+input("Введите E-mail",'email')
+							+e.btn.btn.btn-white(type="submit").w-100 Подписаться сейчас
 	// end sForm

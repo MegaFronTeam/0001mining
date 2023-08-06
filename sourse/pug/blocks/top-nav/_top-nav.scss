@@ -198,12 +198,12 @@
 				border-color: currentColor;
 			}
 		}
-	}
-	ul{
-		list-style: none;
-		display: flex;
-		@include roww(28px);
-		margin-bottom: 0;
+		ul{
+			list-style: none;
+			display: flex;
+			@include roww(28px);
+			margin-bottom: 0;
+		}
 	}
 }
 

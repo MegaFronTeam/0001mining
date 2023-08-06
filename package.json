@@ -47,6 +47,6 @@
     "@splidejs/splide": "^4.1.4",
     "inputmask": "^5.0.8",
     "jquery": "^3.7.0",
-    "swiper": "^10.0.4"
+    "swiper": "^10.1.0"
   }
 }

@@ -1,9 +1,32 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-sm-auto
+					+e.logo(href="#") 
+						include logo.svg
+				.col-sm.col-auto
+					.columns-2
+						ul
+							li: a(href="#")  Инвестиции в майнинг
+							li: a(href="#")  Дата-центр
+							li: a(href="#")  Лизинг
+							li: a(href="#")  Разгоны ASIS 
+							li: a(href="#")  Готовый бизнес
+				.col-xl-3.col-auto
+					.columns-1
+						ul
+							li: a(href="#") Оплата и доставка
+							li: a(href="#") О компании
+							li: a(href="#") Сервис
+							li: a(href="#") Блог
+							li: a(href="#") Контакты
+				.col-sm-auto
+					a.top-nav__tel(href="+7(499)-719-55-88").text-body + 7(499)-719-55-88
+						br
+					a.top-nav__link.tdu(data-fancybox data-type="ajax" href="modal/call.html").text-body Заказать звонок
+					p Есть вопросы? 
+						br
+						| Пишите нам:  #[a(href="#") WhatsApp]  / #[a(href="#") Telegram]
+
+			+e.policy 2023 © Mining Depot. Все права защищены. Не является публичной офертой.  #[a(href="#") Политика конфиденциальности]

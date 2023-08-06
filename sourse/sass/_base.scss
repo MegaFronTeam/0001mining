@@ -24,7 +24,7 @@ html{
 }
 
 body {
-	text-wrap: balance;
+	// text-wrap: balance;
 	&[class*="fixed"],
 	&.fancybox-active{
 		.header{ 
@@ -134,6 +134,35 @@ main{
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	text-wrap: balance;
+	h2{
+		@extend .mono;
+		margin-bottom: rem(26);
+	}
+	.row{
+		align-items: center;
+	}
+	p{
+		font-weight: 300;
+		font-size: rem(19);
+	}
+	&__link-to{
+		@extend .btn, .btn-light;
+		color: #fff !important;
+		margin-bottom: em(18);
+		.icon{
+			font-size: rem(10);
+		}
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		width: rem(27px);
+		height: rem(27px);
+		padding: 0;
+		align-items: center;
+		border-radius: 50%;
+	}
 }
 
 
@@ -305,7 +334,7 @@ ul {
 	position: relative;
 }
 
-.swiper-button-hand {
+.custom-button {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
@@ -556,4 +585,24 @@ iframe {
 }
 h2{
 	font-weight: bold;
+}
+
+.splide__arrow{
+	background: none;
+	color: $info;
+	--pos: -40px;
+	.icon{
+		fill: $info ;
+		font-size: rem(48);
+	}
+	&--prev{
+		left: var(--pos);
+
+	}
+	&--next{
+		right: var(--pos);
+  }
+}
+h3{
+	@extend .mono;
 }
