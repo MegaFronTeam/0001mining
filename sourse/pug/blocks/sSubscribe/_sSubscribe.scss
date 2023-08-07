@@ -19,12 +19,14 @@
 		border-radius: 15px;
 		background-image: url('../img/subscription-bg-sm.jpg');
 		background-size: cover;
+		background-position: bottom right;
 		@include media-breakpoint-up(md) {
 			display: block;
 			padding: 70px 80px 50px;
 			min-height: 0;
 			background-image: url('../img/subscription-bg-md.jpg');
 			border-radius: $border-radius;
+			background-position: 0 0;
 		}
 		@include media-breakpoint-up(xl) {
 			padding: 37px;
