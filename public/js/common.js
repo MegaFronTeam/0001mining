@@ -132,6 +132,27 @@ function eventHandler() {
 	}
 
 	cardSliders('.card-slider');
+
+
+	$(".range-wrap").each(function () {
+		var _self = $(this);
+		var $range = _self.find(".slider-js");  
+
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double", 
+			grid: false,
+			grid_snap: false, 
+			// hide_min_max: true,
+			// hide_from_to: true, 
+		}); 
+
+	})
+
+	$(document).on("click", '.toggle-filter-mobile-js', function () {
+		$('.catalogFilter  ').toggleClass('active');
+		$('body').toggleClass('fixed2');
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

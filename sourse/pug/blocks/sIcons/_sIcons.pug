@@ -29,3 +29,23 @@ mixin sIcons2(data)
 				+i-item(`8`,`Никаких простоев: энергохолдинг официально и&nbsp;бесперебойно подаёт электричество`,'Аптайм 99%').col-md-6
 				+i-item(`9`,`Специалисты всегда на&nbsp;объекте и&nbsp;реагируют на&nbsp;неполадки даже ночью`,'Круглосуточный мониторинг').col-md-6
 	// end sIcons
+mixin sIconsProd(data)
+	// start sIcons
+	+b.sIcons--page.section#sIcons&attributes(attributes)
+		.container
+			mixin item(i,t,p)
+				+e.col.col.col-xl.col-sm-6.col-12&attributes(attributes)
+					+b.icon-item-page
+						.row
+							+e.img-wrap.col-auto
+								+iconC(`icon-${i}`)
+							+e.caption.col
+								if t
+									+e.title!= t
+								p!= p
+			+e.row.row
+				+item(`1`,`Гарантия 6-8 мес.`,'У нас имеется собственный сервисный центр')
+				+item(`2`,`Поддержка 24/7`,`Отремонтируем или  перепрошьем ваш асик`)
+				+item(`3`,`Майнинг под ключ`,'Весь комплекс услуг от поставки до установки в собственном дата-центре')
+				+item(`4`,`Проверка оборудования перед отправкой`,'Отправим результаты проверки на видео вам в мессенджер')
+	// end sIcons

@@ -1,0 +1,45 @@
+mixin catalogFilter(data)
+	// start catalogFilter
+	+b.catalogFilter.d-xl-block&attributes(attributes)
+		+e.head.d-xl-none
+			.row
+				.col Фильтр
+				.col-auto
+					+e.toggle.toggle-filter-mobile-js.on
+						span
+		+e.body.dropdowns
+			.dropdown-item
+				label.form-check.form-switch.fw-600
+					.form-check-label  В наличии
+					input.form-check-input(type='checkbox' role='switch' checked='')
+			mixin item(t, a)
+				+b.dropdown-item(class= a)&attributes(attributes)
+					+e.toggle.dd-head-js(class= a)
+						+icon("chevron-down")
+						= t
+					+e.body.dd-group__content(class= a)
+						block
+			+item(`Цена`, 'active').--price
+				.range-wrap 
+					input(type="text"   data-min='20000' data-max='154000').slider-js
+			+item(`Бренд`, 'active')
+				.mb-2: +in-c( "checkbox", 'Bitmain')
+				.mb-2: +in-c( "checkbox", 'Innosilicon')
+				.mb-2: +in-c( "checkbox", 'MicroBT')
+			+item(`Алгоритм`)
+				.mb-2: +in-c( "checkbox", 'Bitmain')
+				.mb-2: +in-c( "checkbox", 'Innosilicon')
+				.mb-2: +in-c( "checkbox", 'MicroBT')
+			+item(`Потребление`)
+				.mb-2: +in-c( "checkbox", 'Bitmain')
+				.mb-2: +in-c( "checkbox", 'Innosilicon')
+				.mb-2: +in-c( "checkbox", 'MicroBT')
+			+item(`Добываемые монеты`)
+				.mb-2: +in-c( "checkbox", 'Bitmain')
+				.mb-2: +in-c( "checkbox", 'Innosilicon')
+				.mb-2: +in-c( "checkbox", 'MicroBT')
+			+e.row
+				+e.btn.BUTTON.btn.btn-primary Показать 
+				+e.btn.BUTTON.btn.btn-link
+					span Сбросить 
+	// end catalogFilter

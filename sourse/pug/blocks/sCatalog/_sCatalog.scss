@@ -4,6 +4,10 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row{
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: 16px;
+
+		}
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
@@ -60,6 +64,49 @@
 		width: calc(100% - var(--gutter-x));
 	}
 
+	&__toggle-filter{
+		cursor: pointer;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		.icon{
+			font-size: 22px;
+			margin-right: 10px;
+		}
+	}
+	&__head-row{
+		align-items: center;
+		margin-bottom: rem(36);
+		--bs-gutter-y: 15px;
+		.btn{
+			font-weight: 400; 
+			padding: em(8) em(20);
+			font-size: rem(10);
+			border-radius: em(8);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(14);
+			}
+			margin-top: 3px;
+			margin-bottom: 3px;
+			--bs-btn-bg: #F1F2F2;
+			--bs-btn-border-color: #F1F2F2;
+			&:not(:last-child) {
+				@include media-breakpoint-up(sm) {
+
+					margin-right: rem(20);
+				}
+				margin-right: rem(5);
+			}
+		}
+		.form-select{
+			border:  none !important;
+			padding: 0;
+			font-weight: 300;
+			padding-right: rem(25);
+			background-position: right  center;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -67,6 +114,27 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	
+	&--page{
+		@include media-breakpoint-down(sm) {
+			.product-item__footer{
+				display: block;
+			}
+			.product-item__btn{
+				margin-top: 16px;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			.product-item__btns {
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
+				text-align: center;
+			}
+			.product-item{
+			}
+		}
+	}
 } // end.sCatalog
 
 .prod-tags{
