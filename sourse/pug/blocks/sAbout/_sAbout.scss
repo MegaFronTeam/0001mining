@@ -1,15 +1,106 @@
 // start .sAbout
+.sAbout + .sIcons{
+	
+	--sPT: #{rem(0)};
+}
 .sAbout {
+	@include media-breakpoint-down(md){
+		--sPT: #{rem(0)};
+
+	}
 	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPB: #{rem(110)};
 	// --sTPB: #{rem()};
+	padding-bottom: 0;
+	&__bg-wrap{
+		@include media-breakpoint-up(md){
+			position: static;
+			aspect-ratio: 0;
+		}
+		@include media-breakpoint-up(sm){
+			// padding-bottom: 0;
+			aspect-ratio: 5 / 3 ;
+			height: auto;
+		} 
+			height: 340px;
+		aspect-ratio: 5 / 4 ;
+		position: relative;
+		&::before{
+			content: '';
+			z-index: -1;
+			background-repeat: no-repeat;
+			bottom: 0;
+			--w: 1600;
+			left: 50%;
+			@include media-breakpoint-up(lg) {
+				margin-left: calc(var(--w) * 1px / -2);
+			}
+			@include media-breakpoint-up(md) {
+				margin-left: calc(var(--w) * 1px / -2 + 70px);
+			}
+			@include media-breakpoint-up(sm) {
+			margin-left: calc(var(--w) * 1px / -2 + 60%);
+		}
+		margin-left: calc(var(--w) * 1px / -2 + 60%);
+			aspect-ratio: 661 / var(--w);
+			width: calc(var(--w) * 1px);
+			bottom: 0;
+			display: block;
+			pointer-events: none;
+			position: absolute;
+			background-image: url(../img/map-bg.png);
+			background-repeat: no-repeat;
+			// background-size: contain;
+			background-position: bottom center;
+		}
+	}
+	.container{
+		padding-bottom:  var(--sPB);
+		z-index: 2;
+		position: relative;
+		
+
+	}
+
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 
 	}
 	.section-title{
+		@include media-breakpoint-up(lg) {
+			max-width:rem(612);
+		}
 		
+		@include media-breakpoint-up(md) {
+			max-width: 60%;
+		}
+
+		margin-left: auto;
+	}
+	font-size: rem(19); 
+	a{
+		font-weight: 600;
+		// border-bottom: 1px solid #000;
+		// @extend .tdu;
+		border-bottom: 1px solid ;
+		position: relative;
+		&::after{
+			content: '';
+			width: em(9px  * .9);
+			height: em(15px  * .9);
+			background-image: var(--chevron-right-info);
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 100%;
+			top: em(5);
+			position: absolute;
+			margin-left: 10px;
+		}
+		&:hover{
+			border-color: transparent;
+		}
+		color: $body-color;
 	}
 	&__col{
 

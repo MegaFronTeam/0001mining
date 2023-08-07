@@ -2,8 +2,26 @@ mixin sStories(data)
 	// start sStories
 	+b.SECTION.sStories.section#sStories&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sStories
-				
-			+e.row.row
+			+e.inner
+				+e.row.row
+					.col
+						+b.section-title 
+							h2 Посмотрите наши сторис
+							p Короткие видео о нашей работе
+					.col-xl-8
+						+e.slider--js.splide
+							+arrow2()
+							.splide__track
+								.splide__list
+									mixin item(i,t)
+										+e.slide.splide__slide
+											+e.item.bg-wrap
+												+img(`img/story-${i}.jpg`,'bg').img-bg
+												p!= t
+									+item(`1`,`Как добраться до офиса`)
+									+item(`2`,`Как мы отправляем оборудование по регионам`)
+									+item(`3`,`Видеопроверка для нашего клиента из регионов`)
+									+item(`4`,`Добро пожаловать в наш офис`)
+									+item(`5`,`Ситуация на рынке майнинга `)
+
 	// end sStories

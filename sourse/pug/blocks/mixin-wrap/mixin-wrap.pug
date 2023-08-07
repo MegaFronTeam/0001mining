@@ -12,10 +12,17 @@ include components/btn.pug
 include components/ddgroup.pug
 
 mixin arrow()
-	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+	.custom-button.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
 		+icon('chevron-left')
-	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+	.custom-button.swiper-button-hand.swiper-button-hand-next.swiper-button-next
 		+icon('chevron-right')
+//- /arrow for swiper-slider
+mixin arrow2()
+	.splide__arrows
+	button(class="splide__arrow splide__arrow--prev")
+		+icon('arrow-right') 
+	button( class="splide__arrow splide__arrow--next")
+		+icon('arrow-right') 
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -26,7 +33,7 @@ mixin ie11()
 mixin addblock()
 	+b.addBlock
 		+e.btn--minus(type="button")
-		input(type="text" value="1")
+		input(type="text" value="1"  inputmode='numeric')
 		+e.btn--plus(type="button")
 
 
@@ -34,7 +41,7 @@ mixin addblock()
 mixin search()
 	+b.search-block.d-xl-block
 		form
-			input(type="text" placeholder="Искать среди 1000 товаров")
+			input(type="text" placeholder="Искать среди 1000 товаров" inputmode='search')
 			button
 				+icon("search")
 

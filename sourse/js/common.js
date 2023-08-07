@@ -27,8 +27,7 @@ function eventHandler() {
 		spaceBetween: 0,
 		lazy: {
 			loadPrevNext: true,
-		},
-		watchOverflow: true,
+		}, 
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -44,29 +43,95 @@ function eventHandler() {
 		},
 	}
 
-	new Swiper('.breadcrumb-slider--js', {
-		slidesPerView: 'auto',
-		freeMode: true,
-		watchOverflow: true
-	});
+	// new Swiper('.breadcrumb-slider--js', {
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	watchOverflow: true
+	// });
+ 
+	
+	// new Swiper('.sCatalog__slider--js', {  
+	// 	slidesPerView: 'auto',
+	// 	spaceBetween: 0,
+	// 	scrollbar: {
+	// 		el: ".sCatalog__slider--js .swiper-scrollbar",
+	// 		draggable: true,
+	// 	},
+	// });
+	let catalogsliders = document.querySelectorAll('.sCatalog__slider--js');
+	if(catalogsliders.length) {
 
-	const swiper4 = new Swiper('.sBanners__slider--js', { // если не используешь методы swiper  - можно обращаться без нее к Swiper
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		for (const item of catalogsliders) {
+			
+			new Splide(item, {
+				autoWidth: true,
+				perMove: 1,
+				gap: 30,
+				arrows: false,
+				pagination: false,
+			}).mount();
+		}
+	}
 
-	});
+	let storiesSliders = document.querySelector('.sStories__slider--js');
+	if (storiesSliders) {
+
+		new Splide(storiesSliders,{
+			type: 'loop',
+			perPage: 1,
+			perMove: 1,
+			gap: '1rem',
+			mediaQuery: 'min', 
+			pagination: false,
+			breakpoints: {
+				576: {
+					perPage: 2,
+				},
+
+				768: {
+					perPage: 3,
+				}, 
+
+				992: {
+					perPage: 4,
+				}, 
+				1200: {
+					perPage: 5,
+					gap: '1.8rem',
+				},
+				
+				
+			}
+		}).mount();
+	}
+		
+
 	document.addEventListener("click", function (e) {
 		let target = e.target.closest(".top-nav__btn--search-toggle-js");
 		if (target) {
 			document.querySelector('.search-block').classList.toggle("active");
     }
 	})
+
+
+	function cardSliders(slider) {
+
+		const catalogCards = $(slider);
+		for (const card of catalogCards) {
+			let cardSlider = new Splide(card.querySelector(".slider-card-js"), {  
+				perMove: 1,
+				perPage: 1,
+				gap: 0,
+			}).mount(); 
+			//  при наведении меняется картинки на слайдере 
+			$(card).on('mouseenter', '.splide__pagination li', function () {
+				cardSlider.go($(this).index());
+			});
+
+		}
+	}
+
+	cardSliders('.card-slider');
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -2,8 +2,9 @@ mixin sLease(data)
 	// start sLease
 	+b.SECTION.sLease.section#sLease&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sLease
-				
-			+e.row.row
+			+b.section-title 
+				h2 Пользуйтесь сейчас — выкупайте через 3 года
+				+img("img/lease-img.png")
+				p У нас вы можете не только купить оборудование, но и взять его в лизинг. Так вам не придётся сразу оплачивать полную стоимость. К тому же, вы сэкономите на налоге на прибыль и вернёте НДС
+				a.btn.btn-primary(href="#") Узнать условия 
 	// end sLease

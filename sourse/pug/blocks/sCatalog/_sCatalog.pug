@@ -1,41 +1,83 @@
-mixin product-item(i, t, p ,pr)
+mixin product-item(i,badge, t='Asic майнер Bitmain Antminer S19J PRO 104TH/s' )
 	+b.ARTICLE.product-item
 		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
+			if badge
+				+b.prod-tags
+					+e.item(style="--bg: #F56565") ХИТ
+					+e.item(style="--bg: #76C774") Новинка 
+			+b.card-slider
+				+e.DIV.img-slider.splide.slider-card-js
+					.splide__track
+						.splide__list
+							+e.DIV.slide.splide__slide
+								+e.img-wrap
+									.img-wrap-center
+										+img(`img/prod-${i}.jpg`).res-i
+							- for (var x =2; x < 5; x++)
+								+e.DIV.slide.splide__slide
+									+e.img-wrap
+										.img-wrap-center
+											+img(`img/prod-${x+1}.jpg`)
+				//- .swiper-pagination 
 		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
+			+e.head.row
+				+e.rating.col 
+					+iconC("star")
+					| 4
+				.col-auto
+					+e.btn-icon.btn(type="button")  
+						+icon("compare")
+					+e.btn-icon.btn(type="button").active
+						+icon("like")
+			+e.title
+				a(href="#").text-body!= t
+			+e.text
+				div Хэшрейт — 104 TH/s
+				div Потребление, Вт/ч — 3260 ± 10% 
+				div Добываемые монеты — BTC/BCH
+			+e.footer.row
+				.col
+					.d-flex
+						+e.stock -29%
+						+e.price-old 150 000 ₽
+					+e.price 120 000 ₽
+				.col-auto
+					+e.btn(href='#').btn.btn-outline-primary.btn-sm  Заказать
 	// /.product-item
 
-mixin sCatalog(data)
+mixin sCatalogSlider(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
-			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
+				if data.title
+					.row
+						.col-auto
+								h2= data.title 
+						.col-auto
+							+e.link-to(href="#")
+								+icon('chevron-right')
+			+e.slider-wrapper
+				+e.slider--js.splide
+					+e.track.splide__track
+						.splide__list
+							- const wrapClass="col-3"
+							+e.slide.splide__slide
+								+product-item(`1`,`true`,'Asic майнер Bitmain')
+							+e.slide.splide__slide
+								+product-item(`2`,``)
+							+e.slide.splide__slide
+								+product-item(`3`,`true`)
+							+e.slide.splide__slide
+								+product-item(`4`,``)
+							+e.slide.splide__slide
+								+product-item(`5`,``)
+					//- .swiper-scrollbar.d-xl-none
+					//- +e.col(class= wrapClass)
+					//- 	+product-item(`6`,``,``,``) 
+					//- +e.col(class= wrapClass)
+					//- 	+product-item(`7`,``,``,``) 
+					//- +e.col(class= wrapClass)
+					//- 	+product-item(`8`,``,``,``) 
 
 	// end sCatalog

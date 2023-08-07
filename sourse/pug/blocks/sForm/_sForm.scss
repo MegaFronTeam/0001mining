@@ -2,8 +2,8 @@
 	// start .sForm
 	.sForm {
 		// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sPB: #{rem(120)};
+	--sTPB: #{rem(0)};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -20,6 +20,62 @@
 	}
 	&__slide{
 		height: auto;
+	}
+	
+	img{
+		@extend .res-i;
+			@include media-breakpoint-up(xl) {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	.form-wrap{
+		position: relative;
+		color: #fff;
+		@include media-breakpoint-up(xxl) {
+
+			padding: 72px 100px;
+			padding-left: rem(386);
+		}
+		@include media-breakpoint-up(md) {
+
+			padding: 72px rem(40px);
+		}
+		padding: 47px rem(30px);
+		@include media-breakpoint-up(xl) {
+
+			padding-left: rem(326);
+		}
+		position: relative;
+		z-index: 2;
+		&__input{
+			&::placeholder{
+				color: #fff;
+			}
+		}
+			@include media-breakpoint-up(md) {
+
+				form{
+					width: 297px;
+				}
+			}
+		&::before{
+			content: '';
+			width: 100%;
+			border-radius: 25px;
+			opacity: 0.8;
+			@include a-cent;
+			z-index: -1;
+			background: linear-gradient(-60deg, rgb(0, 201, 250) 0%, 2.26337%, rgb(0, 199, 251) 4.52675%, 14.8148%, rgb(0, 180, 251) 25.1029%, 29.0123%, rgb(0, 166, 253) 32.9218%, 36.0082%, rgb(0, 150, 253) 39.0947%, 39.7119%, rgb(0, 146, 254) 40.3292%, 44.0329%, rgb(0, 122, 254) 47.7366%, 49.177%, rgb(0, 112, 255) 50.6173%, 51.6461%, rgb(12, 106, 255) 52.6749%, 53.4979%, rgb(22, 98, 255) 54.321%, 55.3498%, rgb(34, 92, 255) 56.3786%, 58.4362%, rgb(61, 80, 255) 60.4938%, 63.1687%, rgb(82, 67, 255) 65.8436%, 67.9012%, rgb(93, 59, 255) 69.9588%, 84.9794%, rgb(102, 49, 255) 100%)
+		}
+		&__row{
+			@include media-breakpoint-up(xxl) {
+
+				--bs-gutter-x: 112px
+			}
+		}
+
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

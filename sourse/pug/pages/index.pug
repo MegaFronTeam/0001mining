@@ -21,7 +21,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Главная'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -33,16 +33,20 @@ block pagecontent
 		+headerBlock 
 		+sIcons
 		+sWorkForYou
-		+sCatalog
+		+sCatalogSlider({title: "Новинки"})
 		+sProfit
 		+sAbout
 		+sIcons2
-		+sCatalog
+		+sCatalogSlider({title: "Бестселлеры"})
 		+sStories
-		+sRews
-		+sFAQ
+		.container
+			.row(style="--bs-gutter-x: 60px")
+				.col-xl-6
+					+sRews
+				.col-xl-6
+					+sFAQ
 		+sLease
-		+sCatalog
+		+sCatalogSlider({title: "Самые прибыльные"})
 		+sForm
 	+parts('footer')
       

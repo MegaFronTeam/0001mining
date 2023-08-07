@@ -3,7 +3,7 @@ mixin form-head()
 		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
 		block
 
-mixin input(placeholder,  t='text', label, name= t)
+mixin input(placeholder,  t='text', label, inputmode= t, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
@@ -13,14 +13,14 @@ mixin input(placeholder,  t='text', label, name= t)
 				- for (var x = 1; x < 5; x++)
 					option(value=` placeholder ${x}`)= `placeholder ${x}`
 		else if t=='file'
-			+e.INPUT.input.form-control(name=name type=t)&attributes(attributes)
+			+e.INPUT.input.form-control(name=name type=t inputmode=inputmode)
 			
 		else if t=='number'
-			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')&attributes(attributes)
+			+e.INPUT.input.form-control(name=name type=t inputmode=inputmode placeholder=placeholder step='any')
 		else if t=='date'
-			+e.INPUT.input.form-control(name=name type=t )&attributes(attributes)
+			+e.INPUT.input.form-control(name=name type=t inputmode=inputmode)
 		else
-			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)&attributes(attributes)
+			+e.INPUT.input.form-control(name=name type=t inputmode=inputmode placeholder=placeholder)
 	+e.input-wrap.form-group
 		if label
 			label
@@ -58,7 +58,7 @@ mixin form-wrap(inp)
 
 mixin in-c(typ="checkbox", text, name= typ )
 	+b.LABEL.custom-input.form-check
-		+e.INPUT.input.form-check-input(name=name, type=typ)&attributes(attributes)
+		+e.INPUT.input.form-check-input(name=name, type=typ)
 		if block
 			block 
 		else
