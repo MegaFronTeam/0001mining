@@ -1,7 +1,6 @@
 extends ../layout/main.pug
 
 include ../blocks/headerBlock/_headerBlock.pug
-include ../blocks/top-nav/_top-nav.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
@@ -18,13 +17,14 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sDelivery/_sDelivery.pug
 include ../blocks/sSubscribe/_sSubscribe.pug
+include ../blocks/sBlog/_sBlog.pug
 
 block variables
 	- let  mainPage= '' 
 	- let  bg= null
 
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Блог'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -33,9 +33,8 @@ block pagecontent
 	+parts('header')
 	//- a(data-fancybox data-type="ajax" href="modal/test.html") тест
 	main
-		//- +page-head(title,title)
-		+sContact
-		+sSubscribe
+		+page-head(title,title)
+		+sBlog
 	+parts('footer')
       
 

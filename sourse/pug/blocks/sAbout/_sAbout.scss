@@ -117,3 +117,78 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sAbout
+
+.sAboutPage {
+	--sPT: #{rem(0)};
+	// --sPB: #{rem(110)};
+	// --sTPB: #{rem()};
+	&__row {
+		margin-bottom: 66px;
+		--bs-gutter-y: #{rem(50)};
+		// @include media-breakpoint-up(md) {
+		// --bs-gutter-y: #{rem(50)};
+		// }
+	}
+	h2 {
+		font-family: Raleway;
+		font-size: rem(33);
+		font-weight: 600;
+	}
+	p {
+		max-width: 617px;
+		color: #232323;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 150%;
+	}
+	&__client-list {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+	}
+	&__client-item {
+		display: flex;
+		align-items: center;
+		padding: 24px 0;
+		border-bottom: 1px solid $light;
+		img {
+			margin-right: 33px;
+			width: 50px;
+			height: 50px;
+		}
+	}
+	&__client-title {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 135%;
+	}
+	&__client-descr {
+		font-weight: 300;
+		line-height: 130%;
+	}
+	&__services-list {
+		list-style-type: none;
+		@include media-breakpoint-up(lg) {
+			columns: 2;
+			column-gap: 10%;
+		}
+		li {
+			position: relative;
+			padding-left: 40px;
+			margin-bottom: 30px;
+			font-size: rem(18);
+			font-weight: 300;
+			line-height: 150%;
+			&::before {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				top: 10px;
+				left: 0;
+				width: 21px;
+				height: 15px;
+				background-image: url('../img/list-marker.svg');
+			}
+		}
+	}
+}

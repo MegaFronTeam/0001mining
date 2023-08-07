@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Блог</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<link href="libs/@splidejs/splide/css/splide.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Блог</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+						<h1>Блог</h1>
+					</div>
+				</div>
+				<!-- start sBlog-->
+				<section class="sBlog section" id="sBlog">
+					<div class="container">
+						<div class="sBlog__row row">
+							<div class="col-xl-9">
+								<div class="sBlog__subscribe"><img src="img/telegram.png" alt="" loading="lazy"/>
+									<p>Обзор майнинга в России, актуальные кейсы, скидки и акции от Mining Depot. В нашем Телеграм-канале больше 5000 подписчиков!</p>
+									<a class="sBlog__btn btn btn-white" href="#">Перейти
+									</a>
+								</div>
+								<div class="sBlog__articles-row row">
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-1.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Самые актуальные асик-майнеры для добычи Bitcoin в 2022 год
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-2.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Пулы для майнига
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-3.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Законодательное регулирование майнинга в России. Перспективы развития.
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-4.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Подборка мощных асиков для майнинга
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-5.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Самые актуальные асик-майнеры для добычи Bitcoin в 2022 год
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-6.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Майнинг Ethereum
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-1.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Подборка мощных асиков для майнинга
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-2.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Пулы для майнига
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+									<div class="blog-item col-sm-6 col-lg-4">
+										<a class="blog-item__img-wrap" href="#"><img src="img/blog-3.jpg" alt="" loading="lazy"/>
+										</a>
+										<div class="blog-item__title">Майнинг Ethereum
+										</div>
+										<div class="blog-item__descr">Майнинг для новичков
+										</div>
+									</div>
+								</div>
+								<div class="pagination-wrapper">
+									<ul class="page-numbers">
+												<li><span class="prev page-numbers">
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></span>
+												</li>
+												<li><span class="page-numbers current"> 1</span>
+												</li>
+												<li><a class="page-numbers" href="#">1</a>
+												</li>
+												<li><a class="page-numbers" href="#">2</a>
+												</li>
+												<li><a class="page-numbers" href="#">3</a>
+												</li>
+												<li><a class="page-numbers" href="#">4</a>
+												</li>
+												<li><a class="next page-numbers" href="#">
+														<svg class="icon icon-chevron-right ">
+															<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+														</svg></a>
+												</li>
+									</ul>
+								</div>
+							</div>
+							<div class="sBlog__filter col-xl-3">
+								<ul class="sBlog__nav">
+									<li class="sBlog__nav-item">
+										<button class="sBlog__nav-btn">Все публикации <span>134</span>
+										</button>
+									</li>
+									<li class="sBlog__nav-item">
+										<button class="sBlog__nav-btn sBlog__nav-btn--checked">Майнинг для новичков <span>31</span>
+										</button>
+									</li>
+									<li class="sBlog__nav-item">
+										<button class="sBlog__nav-btn">Статьи про майнинг <span>23</span>
+										</button>
+									</li>
+									<li class="sBlog__nav-item">
+										<button class="sBlog__nav-btn">Новости криптовалют <span>11</span>
+										</button>
+									</li>
+								</ul>
+								<ul class="sBlog__tags">
+									<li class="sBlog__tags-item">
+										<button class="sBlog__tags-btn">Асик
+										</button>
+									</li>
+									<li class="sBlog__tags-item">
+										<button class="sBlog__tags-btn">С видео
+										</button>
+									</li>
+									<li class="sBlog__tags-item">
+										<button class="sBlog__tags-btn">Акции
+										</button>
+									</li>
+									<li class="sBlog__tags-item">
+										<button class="sBlog__tags-btn">Статистика
+										</button>
+									</li>
+									<li class="sBlog__tags-item">
+										<button class="sBlog__tags-btn">Энергопотребление
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sBlog-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/@splidejs/splide/js/splide.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
