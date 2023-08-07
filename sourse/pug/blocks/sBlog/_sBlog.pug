@@ -1,0 +1,101 @@
+mixin blog-item(img,title,descr='Майнинг для новичков')
+	+b.blog-item.col-sm-6.col-lg-4
+		+e.img-wrap(href="#")
+			+img(`img/blog-${img}.jpg`)
+		+e.title= title
+		+e.descr= descr
+
+mixin sBlog(data)
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container
+			+e.row.row
+				.col-xl-9
+					+e.subscribe
+						+img(`img/telegram.png`)
+						p Обзор майнинга в России, актуальные кейсы, скидки и акции от Mining Depot. В нашем Телеграм-канале больше 5000 подписчиков!
+						+btn('Перейти').btn.btn-white
+					+e.articles-row.row
+						+blog-item('1','Самые актуальные асик-майнеры для добычи Bitcoin в 2022 год')
+						+blog-item('2','Пулы для майнига')
+						+blog-item('3','Законодательное регулирование майнинга в России. Перспективы развития.')
+						+blog-item('4','Подборка мощных асиков для майнинга')
+						+blog-item('5','Самые актуальные асик-майнеры для добычи Bitcoin в 2022 год')
+						+blog-item('6','Майнинг Ethereum')
+						+blog-item('1','Подборка мощных асиков для майнинга')
+						+blog-item('2','Пулы для майнига')
+						+blog-item('3','Майнинг Ethereum')
+					+pugin()
+				+e.filter.col-xl-3
+					+e.nav.UL
+						+e.nav-item.LI
+							+e.nav-btn.BUTTON Все публикации #[span 134]
+						+e.nav-item.LI
+							+e.nav-btn.--checked.BUTTON Майнинг для новичков #[span 31]
+						+e.nav-item.LI
+							+e.nav-btn.BUTTON Статьи про майнинг #[span 23]
+						+e.nav-item.LI
+							+e.nav-btn.BUTTON Новости криптовалют #[span 11]
+					+e.tags.UL
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON Асик
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON С видео
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON Акции
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON Статистика
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON Энергопотребление
+
+	// end sBlog
+
+
+mixin sBlogText(data)
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container
+			+e.row.row
+				+e.text.col-xl-9
+					+e.subscribe
+						+img(`img/telegram.png`)
+						p Обзор майнинга в России, актуальные кейсы, скидки и акции от Mining Depot. В нашем Телеграм-канале больше 5000 подписчиков!
+						+btn('Перейти').btn.btn-white
+					h2 Мощные ASIC-майнеры от Mining Depot
+					h3 Мощные устройства
+					h4 Мощные устройства
+					p #[strong Мощные ASIC-устройства для майнинга криптовалюты] стали неотъемлемой частью современного майнинга. Они представляют собой специально разработанные машины, оптимизированные для выполнения вычислительных задач, связанных с&nbsp;добычей цифровых активов.
+					p В&nbsp;этой статье мы&nbsp;рассмотрим, как приобрести <a href="#" class="text-link"> мощный ASIC для майнинга</a> криптовалюты и&nbsp;обратим внимание на&nbsp;несколько самых мощных и&nbsp;популярных ASIC-устройств, доступных на&nbsp;рынке.
+					+e.img-wrap
+						+img('img/text-1.jpg')
+					h4 Bitmain Antminer S19&nbsp;XP Hydro
+					p На&nbsp;момент выхода на&nbsp;рынок она была одним из&nbsp;самых <a href="#" class="text-link"> мощных и&nbsp;эффективных устройств </a> в&nbsp;истории майнинга. S19&nbsp;XP Hyd 257th/s в&nbsp;несколько раз превосходит предыдущие модели по&nbsp;всем основным показателям.
+					p #[strong Мощные ASIC-устройства для майнинга криптовалюты стали неотъемлемой частью современного майнинга.] Они представляют собой специально разработанные машины, оптимизированные для выполнения вычислительных задач, связанных с&nbsp;добычей цифровых активов.
+					p В&nbsp;этой статье мы&nbsp;рассмотрим, как приобрести мощный ASIC для майнинга криптовалюты и&nbsp;обратим внимание на&nbsp;несколько самых мощных и&nbsp;популярных ASIC-устройств, доступных на&nbsp;рынке.
+					ul
+						li Мощные ASIC-устройства для майнинга криптовалюты стали неотъемлемой частью современного майнинга. Они представляют собой специально разработанные машины, оптимизированные для выполнения вычислительных задач, связанных с&nbsp;добычей цифровых активов.
+						li В&nbsp;этой статье мы&nbsp;рассмотрим, как приобрести мощный ASIC для майнинга криптовалюты и&nbsp;обратим внимание на&nbsp;несколько самых мощных и&nbsp;популярных ASIC-устройств, доступных на&nbsp;рынке.
+					blockquote Мощные ASIC-устройства для майнинга криптовалюты стали неотъемлемой частью современного майнинга. Они представляют собой специально разработанные машины, оптимизированные для выполнения вычислительных задач, связанных с&nbsp;добычей цифровых активов.В&nbsp;этой статье мы&nbsp;рассмотрим, как приобрести мощный ASIC для майнинга криптовалюты и&nbsp;обратим внимание на&nbsp;несколько самых мощных и&nbsp;популярных ASIC-устройств, доступных на&nbsp;рынке.
+				+e.filter.col-xl-3
+					+e.nav.UL
+						+e.nav-item.LI
+							+e.nav-btn.BUTTON Все публикации #[span 134]
+						+e.nav-item.LI
+							+e.nav-btn.--checked.BUTTON Майнинг для новичков #[span 31]
+						+e.nav-item.LI
+							+e.nav-btn.BUTTON Статьи про майнинг #[span 23]
+						+e.nav-item.LI
+							+e.nav-btn.BUTTON Новости криптовалют #[span 11]
+					+e.tags.UL
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON Асик
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON С видео
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON Акции
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON Статистика
+						+e.tags-item.LI
+							+e.tags-btn.BUTTON Энергопотребление
+
+	// end sBlog

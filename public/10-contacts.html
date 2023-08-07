@@ -30,19 +30,6 @@
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
 			<main>
-				<div class="page-head">
-					<div class="container">
-						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
-							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
-										<meta itemprop="position" content="1"/></a></li>
-								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
-										<meta itemprop="position" content="2"/></a></li>
-							</ol>
-						</nav>
-						<h1>Контакты</h1>
-					</div>
-				</div>
 				<!-- start sContact-->
 				<section class="sContact section" id="sContact">
 					<div class="container">
@@ -69,25 +56,20 @@
 								</a>
 							</div>
 							<div class="sContact__social">
-								<div class="soc">
-									<a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-fb ">
-											<use xlink:href="img/svg/sprite.svg#fb"></use>
+								<div class="sContact__soc-btns btn-group">
+									<a class="sContact__btn sContact__btn--icon btn btn-outline-light" href="#">
+										<svg class="icon icon-like ">
+											<use xlink:href="img/svg/sprite.svg#like"></use>
 										</svg>
 									</a>
-									<a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-instagram ">
-											<use xlink:href="img/svg/sprite.svg#instagram"></use>
-										</svg>
-									</a>
-									<a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-telegram ">
-											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									<a class="sContact__btn sContact__btn--icon btn btn-outline-light" href="#"> 
+										<svg class="icon icon-compare ">
+											<use xlink:href="img/svg/sprite.svg#compare"></use>
 										</svg>
 									</a>
 								</div>
 							</div>
-							<div class="sContact__map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad698a64bde719663129f7bdb736d91e183411a051b39c1bd4a121135bfdd3712&amp;source=constructor" width="900" height="500" frameborder="0"></iframe>
+							<div class="sContact__map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad698a64bde719663129f7bdb736d91e183411a051b39c1bd4a121135bfdd3712&amp;width=100%25&amp;height=475&amp;lang=ru_RU&amp;scroll=false"></script>
 							</div>
 						</div>
 					</div>
