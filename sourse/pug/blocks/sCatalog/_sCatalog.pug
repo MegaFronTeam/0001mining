@@ -44,6 +44,16 @@ mixin product-item(i,badge, t='Asic майнер Bitmain Antminer S19J PRO 104TH
 				.col-auto
 					+e.btn(href='#').btn.btn-outline-primary.btn-sm  Заказать
 	// /.product-item
+mixin product-item-base(i,badge, t='Asic майнер Bitmain Antminer S19J PRO 104TH/s' )
+	+b.ARTICLE.product-item--base
+		+e.img-wrap(href="#")  
+				.img-wrap-center
+					+img(`img/prod-${i}.jpg`)
+		+e.caption 
+			+e.title
+				a(href="#").text-body!= t
+			+e.price 120 000 ₽
+	// /.product-item
 
 mixin sCatalogSlider(data)
 	// start sCatalog
@@ -115,6 +125,30 @@ mixin sCatalog(data)
 				+e.col(class= wrapClass)
 					+product-item(`5`,``)
 			+pugin()
+		//- .swiper-scrollbar.d-xl-none
+		//- +e.col(class= wrapClass)
+		//- 	+product-item(`6`,``,``,``) 
+		//- +e.col(class= wrapClass)
+		//- 	+product-item(`7`,``,``,``) 
+		//- +e.col(class= wrapClass)
+		//- 	+product-item(`8`,``,``,``) 
+
+	// end sCatalog
+mixin sCatalogProd(data)
+	// start sCatalog
+	+b.sCatalog--page.section.pt-0&attributes(attributes)
+		.container
+			.section-title
+				h2 С этим товаром смотрят:
+			+e.row.row
+				- const wrapClass="col-xl-3 col-lg-4 col-6" 
+				+e.col(class= wrapClass)
+					+product-item-base(`1`,`true`,'Asic майнер Bitmain')
+				+e.col(class= wrapClass)
+					+product-item-base(`2`,``)
+				+e.col(class= wrapClass)
+					+product-item-base(`3`,`true`)
+				+e.col(class= wrapClass)
 		//- .swiper-scrollbar.d-xl-none
 		//- +e.col(class= wrapClass)
 		//- 	+product-item(`6`,``,``,``) 

@@ -153,6 +153,30 @@ function eventHandler() {
 		$('.catalogFilter  ').toggleClass('active');
 		$('body').toggleClass('fixed2');
 	})
+
+
+	var main = new Splide('.sProdHead__slider-lg--js', { 
+		rewind: true,
+		// pagination: false,
+		// arrows: false,
+	});
+
+	var thumbnails = new Splide('.sProdHead__slider-sm--js', {
+		// autoWidth: true,
+		direction: 'ttb',
+		height: '100%',
+		gap: 10,
+		// perPage: 5,
+		autoWidth: true,
+		rewind: true,
+		pagination: false,
+		isNavigation: true,
+		arrows: false,
+	});
+
+	main.sync(thumbnails);
+	main.mount();
+	thumbnails.mount();
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

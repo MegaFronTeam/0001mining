@@ -1,9 +1,89 @@
 mixin sProdHead(data)
 	// start sProdHead
-	+b.SECTION.sProdHead.section#sProdHead&attributes(attributes)
+	+b.sProdHead.section#sProdHead&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sProdHead
-				
+			+e.row-head.row
+				.col-auto
+					+b.review-wrap
+							+e.stars(data-rating='5')
+								+icon('rateStar')
+								+icon('rateStar')
+								+icon('rateStar')
+								+icon('rateStar')
+								+icon('rateStar')
+				.col-auto
+					+e.rew-link.td-dsh(href="#") 4 отзыва
+				.col-auto
+					+e.count-of-bye 
+						+iconC("basketB")
+						| 14 куплено в этом месяце
 			+e.row.row
+				.col-xl-5
+					+e.slider-wrap
+						+e.slider-sm--js.splide.d-none.d-xl-block
+							.splide__track
+								.splide__list
+									- for (var x = 0; x < 6; x++)
+										+e.slide--sm.splide__slide
+											.img-wrap-center
+												+img("img/prod.png")
+						+e.slider-lg--js.splide
+							+arrow2
+							.splide__track
+								.splide__list
+									- for (var x = 0; x < 6; x++)
+										+e.slide.splide__slide
+											.img-wrap-center
+												+img("img/prod.png")
+
+				.col-md.order-md-last
+					+e.block
+						.row
+							.col
+								.d-flex.align-items-center
+									.product-item__stock -29%
+									.product-item__price-old 150 000 ₽
+								.product-item__price 120 000 ₽
+							.col-auto
+								.product-item__btns.col-auto
+									button.product-item__btn-icon.btn(type="button")  
+										+icon("compare")
+									button.product-item__btn-icon.btn(type="button").active
+										+icon("like")
+						.row.align-items-center.g-3.mb-4
+							.col
+								a.btn.btn-primary.w-100(href="#") Купить в 1 клик
+							+e.link-col.col-auto
+								+e.link-l(href="#").td-dsh Купить в лизинг
+						.row.g-1.align-items-center.mb-4
+							.col-auto
+								img(src="img/tinn.png", alt="")
+							.col
+								.fw-600 Расрочка до 24 мес.
+								.small.fw-300 от банка Тинькофф
+						ul
+							li Гарантия лучшей цены
+							li Возможна опалата как юр. лицо с НДС
+							li Сервисное обсулуживание
+				.col
+					.h5.fw-600 Характеристики
+					p Хэшрейт — 118 TH/s
+					p Алгоритм — SHA-256
+					p Потребление, Вт/ч — 3480 ± 5%
+					p Добываемые монеты — BTC/BCH
+					.fw-500.pb-1
+						+e.link.td-dsh.text-body(href="#")  Все характеристики
+					hr
+					.h5.fw-600  Прибыль:
+					table.w-100.mb-3
+						tr
+							td.pb-2 (от майнинга за 24 ч.)
+							td.pb-2.fw-600 $8.84 / 746₽
+						tr.h5.fw-600 
+							td Окупаемость:
+							td.fw-600 194 дня
+
+					.fw-500
+						+e.link.td-dsh.text-body(href="#") Рассчитать доход
+
 	// end sProdHead
