@@ -1,0 +1,32 @@
+extends ../layout/main.pug
+
+include ../blocks/sProdHead/_sProdHead.pug
+include ../blocks/sProdBody/_sProdBody.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sIcons/_sIcons.pug
+include ../blocks/sSubscribe/_sSubscribe.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= null
+
+block title
+	- let  title= 'Asis майнер Whatsmener M50 114th'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	//- a(data-fancybox data-type="ajax" href="modal/test.html") тест
+	main
+		+page-headProd(title,'Whatsminer',title)
+		+sProdHead
+		+sIconsProd
+		+sProdBody
+		+sSubscribe
+	+parts('footer')
+      
+
+
+

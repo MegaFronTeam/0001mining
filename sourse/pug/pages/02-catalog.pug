@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/catalogFilter/_catalogFilter.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sSubscribe/_sSubscribe.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= null
+
+block title
+	- let  title= 'Каталог'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	//- a(data-fancybox data-type="ajax" href="modal/test.html") тест
+	main
+		+page-headC(title,title)
+		.container
+			.row.row--lg
+				.col-xl-3 
+					+catalogFilter
+				.col-xl-9
+					+sCatalog()
+		+sSubscribe
+	+parts('footer')
+      
+
+
+

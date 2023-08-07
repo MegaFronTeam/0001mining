@@ -606,3 +606,26 @@ h2{
 h3{
 	@extend .mono;
 }
+
+
+.btn-light { 
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: #{$primary};
+	--bs-btn-hover-border-color: #{$primary}; 
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #{$primary};
+	--bs-btn-active-border-color: #{$primary};
+}
+
+.form-check-input:checked[type=checkbox] ~ .form-check-label{
+	font-weight: 500;
+}
+
+.container .container{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.row--lg{
+	--bs-gutter-x: 49px
+}

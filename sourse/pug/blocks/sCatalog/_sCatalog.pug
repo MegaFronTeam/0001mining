@@ -24,7 +24,7 @@ mixin product-item(i,badge, t='Asic майнер Bitmain Antminer S19J PRO 104TH
 				+e.rating.col 
 					+iconC("star")
 					| 4
-				.col-auto
+				+e.btns.col-auto
 					+e.btn-icon.btn(type="button")  
 						+icon("compare")
 					+e.btn-icon.btn(type="button").active
@@ -61,7 +61,7 @@ mixin sCatalogSlider(data)
 				+e.slider--js.splide
 					+e.track.splide__track
 						.splide__list
-							- const wrapClass="col-3"
+							- const wrapClass="col-lg-3 col-sm-6"
 							+e.slide.splide__slide
 								+product-item(`1`,`true`,'Asic майнер Bitmain')
 							+e.slide.splide__slide
@@ -79,5 +79,48 @@ mixin sCatalogSlider(data)
 					//- 	+product-item(`7`,``,``,``) 
 					//- +e.col(class= wrapClass)
 					//- 	+product-item(`8`,``,``,``) 
+
+	// end sCatalog
+mixin sCatalog(data)
+	// start sCatalog
+	+b.sCatalog--page.section.pt-0&attributes(attributes)
+		.container 
+			+e.head-row.row
+				.col-auto.d-xl-none
+					+e.toggle-filter.toggle-filter-mobile-js
+						+icon("filters")
+						| Фильтр 
+				.col-sm-auto.col Найдено: 
+					span.fw-500 135
+				.col-12.d-lg-none
+				.col
+					a.btn.btn-sm.btn-light(href="#") Для Bitcoin
+					a.btn.btn-sm.btn-light(href="#") Для Ethcash
+					a.btn.btn-sm.btn-light(href="#") Для LTC и DOGE
+				.col-auto.d-none.d-sm-block
+					select.form-select
+						option По цене
+						option По названию
+			+e.row.row
+				- const wrapClass="col-lg-4 col-6"
+				- for (var x = 0; x < 2; x++)
+					+e.col(class= wrapClass)
+						+product-item(`1`,`true`,'Asic майнер Bitmain')
+					+e.col(class= wrapClass)
+						+product-item(`2`,``)
+					+e.col(class= wrapClass)
+						+product-item(`3`,`true`)
+					+e.col(class= wrapClass)
+						+product-item(`4`,``)
+				+e.col(class= wrapClass)
+					+product-item(`5`,``)
+			+pugin()
+		//- .swiper-scrollbar.d-xl-none
+		//- +e.col(class= wrapClass)
+		//- 	+product-item(`6`,``,``,``) 
+		//- +e.col(class= wrapClass)
+		//- 	+product-item(`7`,``,``,``) 
+		//- +e.col(class= wrapClass)
+		//- 	+product-item(`8`,``,``,``) 
 
 	// end sCatalog

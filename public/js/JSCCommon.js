@@ -1,7 +1,7 @@
 'use strict';
 class JSCCommon {
 	static modalCall() {
-		const link = '[data-fancybox="modal"], .link-modal-js';
+		const link = '[data-fancybox="modal"], .link-modal-js, [data-type="ajax"]';
 		Fancybox.defaults = {
 			autoFocus: false,
 			placeFocusBack: false,
@@ -10,6 +10,8 @@ class JSCCommon {
 			autoFocus: false,
 			placeFocusBack: false,
 		});
+		 
+
 		Fancybox.bind(link, {
 			arrows: false,
 			// // infobar: false,
@@ -267,12 +269,14 @@ class JSCCommon {
 	static makeDDGroup() {
 		$('.dd-head-js').on('click', function () {
 			let clickedHead = this;
-			$(this).parent().toggleClass('active');
+			$(this).toggleClass('active')
+			.parent().toggleClass('active');
 			$(this)
 				.next()
 				.slideToggle(function () {
 					$(this).toggleClass('active');
 				});
+				
 		});
 		// let parents = document.querySelectorAll('.dd-group-js');
 		// for (let parent of parents) {
@@ -359,7 +363,7 @@ class JSCCommon {
 
 	static init() {
 		this.modalCall();
-		// this.tabscostume('tabs');
+		this.tabscostume('tabs');
 		this.mobileMenu();
 		this.inputMask();
 		// this.sendForm();
