@@ -10,3 +10,23 @@ mixin sAbout(data)
 				p Здесь холодный сибирский климат и&nbsp;низкие тарифы на&nbsp;электричество&nbsp;&mdash; идеальные условия для майнинга. Можем организовать экскурсию на&nbsp;объект, чтобы вы&nbsp;всё увидели сами.
 				a(href="#") Изучить подробности 
 	// end sAbout
+
+mixin sAboutPage(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			.row
+				.col-6
+					+b.section-title
+						h2 Кто мы
+					p Mining Depot&nbsp;&mdash; команда из&nbsp;15&nbsp;экспертов в&nbsp;майнинге. В&nbsp;2017 году мы&nbsp;начали с&nbsp;обслуживания собственного оборудования&nbsp;&mdash; и&nbsp;выросли в&nbsp;компанию, которая помогает 2000 клиентам зарабатывать на&nbsp;добыче криптовалюты. 
+					p Мы&nbsp;заинтересованы в&nbsp;том, чтобы ваш доход рос. А&nbsp;для роста недостаточно просто купить майнер: нужно понять, что с&nbsp;ним делать, знать возможности и&nbsp;ограничения бизнеса, изучить точки входа и&nbsp;выхода, понимать перспективы рынка. Поэтому мы&nbsp;предлагаем комплексный сервис&nbsp;&mdash; от&nbsp;оценки ваших потребностей до&nbsp;технического обслуживания майнеров.
+				.col-6
+					+b.section-title
+						h2 Для кого работаем
+					//- +e.client-list.UL
+					//- 	mixin client(icon, title, descr)
+					//- 		+e.client-item
+
+
+	// end sAbout
