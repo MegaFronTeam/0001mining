@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Дата-центр</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<link href="libs/@splidejs/splide/css/splide.min.css" rel="stylesheet"/>
+		<link href="libs/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<!-- start headerBlock-->
+				<div class="headerBlock" id="headerBlock">
+					<div class="container">
+						<div class="section-title"><img src="img/data-header.png" alt="" loading="lazy"/>
+							<h1>Дата-центр</h1>
+							<p>Вам не&nbsp;нужно самостоятельно арендовать помещение или устанавливать шумное оборудование дома&nbsp;&mdash; мы&nbsp;разместим ваш майнер в&nbsp;дата-центре. Возьмём на&nbsp;себя доставку, настройку, мониторинг и&nbsp;техническое обслуживание.</p><a class="btn btn-white" data-fancybox="data-fancybox" data-type="ajax" href="modal/call.html">Оставьте заявку</a>
+						</div>
+					</div>
+				</div>
+				<!-- end headerBlock-->
+				<!-- start sData-->
+				<section class="sData section" id="sData">
+					<div class="container">
+						<div class="section-title">
+							<h2>Идеальный микроклимат</h2>
+						</div>
+						<div class="sData__row row">
+							<div class="col-6">
+								<p>В&nbsp;ходе работы майнеры сильно нагреваются. Чтобы они не&nbsp;вышли из&nbsp;строя, нужна промышленная система охлаждения и&nbsp;кондиционирования. </p>
+								<p>В&nbsp;нашем дата-центре поддерживаются оптимальные температура и&nbsp;влажность&nbsp;&mdash; для долгой, безопасной, беспроблемной эксплуатации.Наш дата-центр находится в&nbsp;Красноярске, городе с&nbsp;холодным сибирским климатом и&nbsp;доступным электричеством.</p>
+							</div>
+							<div class="col-6"></div>
+						</div>
+						<div class="sData__row row">
+						</div>
+					</div>
+				</section>
+				<!-- end sData-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/@splidejs/splide/js/splide.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/datatables/media/js/jquery.dataTables.min.js"></script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
