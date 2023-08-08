@@ -53,7 +53,7 @@
 					<div class="container">
 						<div class="sCalc__head">
 							<div class="form-wrap row">
-								<div class="col-auto">
+								<div class="form-wrap__col col-auto">
 									<div class="form-wrap__text-up">Цена на электроэнергию:
 									</div>
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="number" type="number" inputmode="number" placeholder="" step="any"/>
@@ -61,7 +61,7 @@
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
-								<div class="col-auto"> 
+								<div class="form-wrap__col col-auto">
 									<div class="form-wrap__text-up">Комиссия пула:
 									</div>
 									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="number" type="number" inputmode="number" placeholder="" step="any"/>
@@ -69,7 +69,8 @@
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
-								<div class="col-auto">
+								<div class="col-12 d-md-none"></div>
+								<div class="form-wrap__col col-auto">
 									<div class="form-wrap__text-up">Выбор валюты:
 									</div>
 									<div class="form-wrap__input-wrap form-group">
@@ -83,23 +84,23 @@
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
-								<div class="col-auto">
+								<div class="form-wrap__col col-xl-auto col">
 									<div class="form-wrap__text-up">Курс доллара к рублю:
 									</div>
 									<div class="form-wrap__curs">91.35 ₽
 									</div>
 								</div>
-								<div class="col-auto ms-auto">
+								<div class="form-wrap__col-search col-xl">
 									<div class="form-wrap__text-up"> 
 									</div>
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="number" type="number" inputmode="number" placeholder="Какой у вас майнер?" step="any"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" inputmode="search" placeholder="Какой у вас майнер?"/>
+										<button class="btn">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
 									</div>
 									<!-- +e.input-wrap-->
-									<button class="btn">
-										<svg class="icon icon-search ">
-											<use xlink:href="img/svg/sprite.svg#search"></use>
-										</svg>
-									</button>
 								</div>
 							</div>
 						</div>
@@ -127,40 +128,19 @@
 								</thead>
 								<tbody>
 											<tr>
-												<td><a class="tdu link-info" href="#">microbtWHATSMINER M56S</a></td>
-												<td>5400 Ватт</td>
-												<td>320 Th/s</td>
-												<td> <a class="tdu link-info" href="#">BTC </a></td>
-												<td class="small">
-													 648 ₽ в день<br/>19 440 ₽ в месяц</td>
-												<td class="small">
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M56S</a></td>
+												<td data-title="Потребление">5400 Ватт</td>
+												<td data-title="Хэшрейт">320 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
-												<td class="small">
-													 1 401,95 ₽
-													<div class="text-secondary">0.00075 BTC</div>
-												</td>
-												<td class="text-center"> 
-													<div class="sCalc__delete">
-														<svg class="iconC iconC-basketB ">
-															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
-														</svg>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td><a class="tdu link-info" href="#">microbtWHATSMINER M56++</a></td>
-												<td>5400 Ватт </td>
-												<td>255 Th/s</td>
-												<td> <a class="tdu link-info" href="#">BTC </a></td>
-												<td class="small">
-													 648 ₽ в день<br/>19 440 ₽ в месяц</td>
-												<td class="small">
-													 1 401,95 ₽
-													<div class="text-secondary">0.00075 BTC</div>
-												</td>
-												<td class="small">
+												<td class="small" data-title="Доход (чистыми в месяц)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
@@ -173,40 +153,19 @@
 												</td>
 											</tr>
 											<tr>
-												<td><a class="tdu link-info" href="#">microbtWHATSMINER M56</a></td>
-												<td>5400 Ватт</td>
-												<td>238 Th/s</td>
-												<td> <a class="tdu link-info" href="#">BTC </a></td>
-												<td class="small">
-													 648 ₽ в день<br/>19 440 ₽ в месяц</td>
-												<td class="small">
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M56++</a></td>
+												<td data-title="Потребление">5400 Ватт </td>
+												<td data-title="Хэшрейт">255 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
-												<td class="small">
-													 1 401,95 ₽
-													<div class="text-secondary">0.00075 BTC</div>
-												</td>
-												<td class="text-center"> 
-													<div class="sCalc__delete">
-														<svg class="iconC iconC-basketB ">
-															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
-														</svg>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td><a class="tdu link-info" href="#">microbtWHATSMINER M53S++</a></td>
-												<td>5400 Ватт</td>
-												<td>338 Th/s</td>
-												<td> <a class="tdu link-info" href="#">BTC </a></td>
-												<td class="small">
-													 648 ₽ в день<br/>19 440 ₽ в месяц</td>
-												<td class="small">
-													 1 401,95 ₽
-													<div class="text-secondary">0.00075 BTC</div>
-												</td>
-												<td class="small">
+												<td class="small" data-title="Доход (чистыми в месяц)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
@@ -219,40 +178,19 @@
 												</td>
 											</tr>
 											<tr>
-												<td><a class="tdu link-info" href="#">microbtWHATSMINER M53</a></td>
-												<td>6554 Ватт </td>
-												<td>330 Th/s</td>
-												<td> <a class="tdu link-info" href="#">BTC </a></td>
-												<td class="small">
-													 648 ₽ в день<br/>19 440 ₽ в месяц</td>
-												<td class="small">
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M56</a></td>
+												<td data-title="Потребление">5400 Ватт</td>
+												<td data-title="Хэшрейт">238 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
-												<td class="small">
-													 1 401,95 ₽
-													<div class="text-secondary">0.00075 BTC</div>
-												</td>
-												<td class="text-center"> 
-													<div class="sCalc__delete">
-														<svg class="iconC iconC-basketB ">
-															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
-														</svg>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td><a class="tdu link-info" href="#">microbtWHATSMINER M50S++  </a></td>
-												<td>5400 Ватт</td>
-												<td>226 Th/s</td>
-												<td> <a class="tdu link-info" href="#">BTC </a></td>
-												<td class="small">
-													 648 ₽ в день<br/>19 440 ₽ в месяц</td>
-												<td class="small">
-													 1 401,95 ₽
-													<div class="text-secondary">0.00075 BTC</div>
-												</td>
-												<td class="small">
+												<td class="small" data-title="Доход (чистыми в месяц)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
@@ -265,17 +203,19 @@
 												</td>
 											</tr>
 											<tr>
-												<td><a class="tdu link-info" href="#">microbtWHATSMINER M50S</a></td>
-												<td>3276 Ватт</td>
-												<td>216 Th/s</td>
-												<td> <a class="tdu link-info" href="#">BTC </a></td>
-												<td class="small">
-													 648 ₽ в день<br/>19 440 ₽ в месяц</td>
-												<td class="small">
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M53S++</a></td>
+												<td data-title="Потребление">5400 Ватт</td>
+												<td data-title="Хэшрейт">338 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
-												<td class="small">
+												<td class="small" data-title="Доход (чистыми в месяц)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
@@ -288,17 +228,94 @@
 												</td>
 											</tr>
 											<tr>
-												<td><a class="tdu link-info" href="#">microbtWHATSMINER M50</a></td>
-												<td>3306 Ватт</td>
-												<td>200 Th/s</td>
-												<td> <a class="tdu link-info" href="#">BTC </a></td>
-												<td class="small">
-													 648 ₽ в день<br/>19 440 ₽ в месяц</td>
-												<td class="small">
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M53</a></td>
+												<td data-title="Потребление">6554 Ватт </td>
+												<td data-title="Хэшрейт">330 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>
-												<td class="small">
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M50S++  </a></td>
+												<td data-title="Потребление">5400 Ватт</td>
+												<td data-title="Хэшрейт">226 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M50S</a></td>
+												<td data-title="Потребление">3276 Ватт</td>
+												<td data-title="Хэшрейт">216 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M50</a></td>
+												<td data-title="Потребление">3306 Ватт</td>
+												<td data-title="Хэшрейт">200 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
 													 1 401,95 ₽
 													<div class="text-secondary">0.00075 BTC</div>
 												</td>

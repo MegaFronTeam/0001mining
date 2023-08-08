@@ -4,25 +4,26 @@ mixin sCalc(data)
 		.container
 			+e.head
 				+b.form-wrap.row
-					.col-auto
+					+e.col.col-auto
 						+e.text-up Цена на электроэнергию:
 						+input("",'number')(value="5")
 							.small ₽/кВт ч
-					.col-auto 
+					+e.col.col-auto
 						+e.text-up Комиссия пула:
 						+input("",'number')(value="0")
 							.small %
-					.col-auto
+					.col-12.d-md-none
+					+e.col.col-auto
 						+e.text-up Выбор валюты:
 						+input("₽",'select')
-					.col-auto
+					+e.col.col-xl-auto.col
 						+e.text-up Курс доллара к рублю:
 						+e.curs 91.35 ₽
-					.col-auto.ms-auto
+					+e.col-search.col-xl
 						+e.text-up 
-						+input("Какой у вас майнер?",'number')(value="0")
-						button.btn
-							+icon("search")
+						+input("Какой у вас майнер?",'text','','search')(value="0")
+							button.btn
+								+icon("search")
 			+e.body
 				table#myTable
 					thead
@@ -41,23 +42,22 @@ mixin sCalc(data)
 					tbody
 						mixin tr(t1, t2, t3)
 							tr
-								td
+								td(data-title=' Ваш майнер')
 									a(href="#").tdu.link-info= t1
-								td= t2
-								td= t3
-								td 
+								td(data-title='Потребление')= t2
+								td(data-title='Хэшрейт')= t3
+								td(data-title=' Монета') 
 									a(href="#").tdu.link-info BTC 
-								td.small 
-									| 648 ₽ в день
-									br
+								td.small(data-title='Расходы') 
+									+e.text 648 ₽ в день 
 									| 19 440 ₽ в месяц
-								td.small 
+								td.small(data-title='Доход (чистыми в день)') 
 									| 1 401,95 ₽
 									.text-secondary 0.00075 BTC
-								td.small 
+								td.small(data-title='Доход (чистыми в месяц)') 
 									| 1 401,95 ₽
 									.text-secondary 0.00075 BTC
-								td.text-center 
+								td.text-center() 
 									+e.delete
 										+iconC("basketB")
 						+tr(`microbtWHATSMINER M56S`,`5400 Ватт`,`320 Th/s`)
