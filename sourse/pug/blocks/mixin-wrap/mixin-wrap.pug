@@ -52,7 +52,7 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
-
+			block
 mixin page-headC(t,...items)
 	+b.page-head
 		- let l = items.length
@@ -77,7 +77,7 @@ mixin page-headProd(t,...items)
 		- let l = items.length
 		.container
 			.row.align-items-center
-				.col-auto.mb-4
+				.col-auto.mb-1
 					div(class="prod-tags__item" style="--bg: #F56565") ХИТ 
 						span.d-none.d-xl-inline   продаж
 				.col

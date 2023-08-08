@@ -120,11 +120,19 @@
 
 
 .page-head{
-	padding-top: calc(var(--sPT) + #{rem(20)});
-	padding-bottom: var(--sTPB);
+	@include media-breakpoint-up(xl) {
+		padding-top: calc(var(--sPT) + #{rem(20)});
+		padding-bottom: var(--sTPB);
+	}
+	padding-bottom: 20px;
+	padding-top: calc(var(--sPT) );
 	h1{
 		// @extend .h2;
 		@extend .mono;
+	}
+	p{
+		font-weight: 300;
+		font-size: rem(20);
 	}
 }
 

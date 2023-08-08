@@ -1,0 +1,93 @@
+// start .sCalc
+.sCalc {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	table{
+		border-radius: 25px;
+	}
+	td,
+	th{
+		&:not(:last-child){
+			padding-left: rem(43);
+		}
+		.iconC{
+			font-size: rem(24);
+		}
+	}
+	table.dataTable thead th,
+	th{
+		font-size: rem(18);
+		font-weight: 500;
+		padding-top: rem(30);
+		padding-bottom: rem(30);
+		background-color: #F1F2F2;
+		border: 1px solid var(--light-gray, #F1F2F2) !important;
+		&:first-child{
+			border-radius: 25px 0 0px 0px;
+		}
+		
+		&:last-child{
+			border-radius: 0 25px  0px 0px;
+		}
+
+		.small{
+				font-size: em(10);
+				font-weight: 300;
+		}
+	}
+	td{
+		font-weight: 300;
+		.small{}
+	}
+
+	table.dataTable tbody td{
+		padding-top: 18px;padding-bottom: 18px;
+		border-bottom: 1px solid var(--light-gray, #D5DFDF);
+		&:first-child{ 
+			border-left: 1px solid var(--light-gray, #D5DFDF);
+		}
+		
+		&:last-child{ 
+			border-right: 1px solid var(--light-gray, #D5DFDF);
+		}
+
+	}
+	.dataTables_info{
+		display: none;
+	}
+	table.dataTable.no-footer{
+		border: none;
+	}
+	tr:last-child{
+		td:first-child{
+			border-radius:  0 0px 0px 25px;
+		}
+		
+		td:last-child{
+			border-radius:  0 0px 25px 0px;
+		}
+
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCalc
