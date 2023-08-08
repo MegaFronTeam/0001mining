@@ -115,6 +115,7 @@
 		border: none;
 		@include media-breakpoint-up(lg) {
 			border-top: 1px solid $light;
+			border-bottom: 1px solid $light;
 			padding: 20px 40px;
 		}
 	}

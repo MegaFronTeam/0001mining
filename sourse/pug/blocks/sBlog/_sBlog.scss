@@ -137,6 +137,9 @@
 		margin-bottom: 10px;
 	}
 	&__tags-btn {
+		@extend .btn;
+		@extend .btn-light;
+		@extend .btn-light;
 		padding: 7px 16px;
 		border-radius: 5px;
 		background: #EEF0F0;
