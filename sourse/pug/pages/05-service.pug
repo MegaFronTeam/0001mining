@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+ 
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sService/_sService.pug 
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Сервис'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	//- a(data-fancybox data-type="ajax" href="modal/test.html") тест
+	main
+		+headerBlock(`service-header`,`Сервис`,`Простой даже одного майнера&nbsp;&mdash; это частичная потеря дохода. Мы&nbsp;быстро возвращаем оборудование к&nbsp;жизни, чтобы поломка как можно меньше повлияла на&nbsp;ваш бизнес.`)
+		+sService
+		+sForm05
+	+parts('footer')
+
+
+

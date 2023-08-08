@@ -16,3 +16,24 @@ mixin sForm()
 							+input("Введите E-mail",'email')
 							+e.btn.btn.btn-white(type="submit").w-100 Подписаться сейчас
 	// end sForm
+
+mixin sForm05()
+	// start sForm
+	+b.SECTION.sForm.--serv.section#sForm&attributes(attributes)
+		.container
+			+b.form-wrap
+				+e.row.row
+					.col-md-6.col-xl-12
+						picture
+							source(media="(min-width: 1200px)", srcset="img/form-img.png") 
+							+img('img/form-img-mob.png')
+					.col-md-6.col-xl-12
+						+b.section-title.col
+							h2 Если нужна помощь
+							p Отправьте заявку&nbsp;&mdash; мы&nbsp;перезвоним, выясним, что случилось, и&nbsp;предложим решение.
+					.col-xxl-12
+						form
+							+input("Как вас зовут",'text')
+							+input("Телефон",'tel')
+							+e.btn.btn.btn-white(type="submit") Хочу консультацию
+	// end sForm05

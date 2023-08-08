@@ -279,3 +279,34 @@
     height: auto;
   }
 }
+
+// Cписок с "галочкой"
+
+@mixin ckecklist {
+  padding: 50px 0;
+  list-style: none;
+  font-size: rem(18);
+  font-weight: 300;
+  line-height:150%;
+}
+
+// Стили для пунка списка с "галочкой"
+
+@mixin li-check {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 40px;
+  @include media-breakpoint-up(sm) {
+    padding-left: 53px;
+  }
+  &::before {
+    background-image: url(../img/list-marker.svg);
+    content: "";
+    display: inline-block;
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 21px;
+  }
+}

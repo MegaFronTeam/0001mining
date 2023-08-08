@@ -75,7 +75,77 @@
 				--bs-gutter-x: 112px
 			}
 		}
-
+		
+	}
+	&--serv {
+		h2 {
+			font-size: 32px;
+			@include media-breakpoint-up(md) {
+				font-size: rem(42);
+			}
+		}
+		.form-wrap {
+			&__btn {
+				padding-left: 50px;
+				padding-right: 50px;
+				grid-row: 1 / 2;
+				grid-column: 2 / 3;
+				width: 100%;
+				@include media-breakpoint-up(xl) {
+					grid-row: auto;
+					grid-column: auto;
+				}
+				@include media-breakpoint-up(sm) {
+					width: auto;
+				}
+			}
+			@include media-breakpoint-up(xl) {
+				padding: 62px 76px;
+			}
+			@include media-breakpoint-up(xxl) {
+				padding: 62px 76px;
+			}
+			@include media-breakpoint-up(md) {
+				form{
+					width: auto;
+				}
+			}
+			p {
+				font-size: 17px;
+				@include media-breakpoint-up(xl) {
+					font-size: 17px;
+				}
+			}
+		}
+		form {
+			display: block;
+			max-width: 920px;
+			@include media-breakpoint-up(md) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 0 30px;
+				}
+			@include media-breakpoint-up(xl) {
+				gap: 26px;
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+		.form-wrap__input-wrap {
+			margin-bottom: 0;
+		}
+		img{
+			@extend .res-i;
+				@include media-breakpoint-up(xl) {
+				right: 0;
+				left: auto;
+				z-index: -1;
+			}
+		}
+		.form-wrap__input {
+			@include media-breakpoint-down(md) {
+				margin-bottom: 13px;
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

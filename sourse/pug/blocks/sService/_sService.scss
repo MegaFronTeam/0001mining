@@ -1,0 +1,100 @@
+// start .sService
+.sService {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	counter-reset: steps;
+	&__row{
+		--bs-gutter-x: #{rem(75)};
+		--bs-gutter-y: #{rem(40)};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__article {
+		margin-bottom: 80px;
+	}
+	&__item{
+		display: flex;
+		img {
+			margin-right: 38px;
+			width: 53px;
+			height: 53px;
+		}
+	}
+	&__item-title {
+		margin-bottom: 8px;
+		color: #000;
+		font-size: rem(24);
+		font-weight: 500;
+		line-height: 129%;
+	}
+	&__descr {
+		color: #000;
+		font-size: 15px;
+		font-weight: 300;
+		line-height: 143%;
+	}
+	&__steps-list {
+		display: block;
+		padding-left: 0;
+		list-style-type: none;
+		@include media-breakpoint-up(sm) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 15px 50px;
+		}
+		@include media-breakpoint-up(xl) {
+			gap: 50px;
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	&__step {
+		position: relative;
+		padding-top: 60px;
+		margin-bottom: 30px;
+		@include media-breakpoint-up(sm) {
+			padding-top: 85px;
+			margin-bottom: 0;
+		}
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			counter-increment: steps;
+			content: "0" counter(steps); 
+			color: $light;
+			font-family: Raleway;
+			font-size: rem(42);
+			font-weight: 300;
+			line-height: 107.9%;
+			letter-spacing: -1.1px;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(55);
+			}
+		}
+	}
+	&__step-title {
+		margin-bottom: 15px;
+		font-size: rem(21);
+		line-height: 1.1;
+		font-weight: 500;
+		letter-spacing: -0.21px;
+	}
+	&__dtep-descr {
+		font-size: 15px;
+		font-weight: 300;
+		line-height: 166%;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sService
