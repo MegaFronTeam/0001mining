@@ -154,29 +154,33 @@ function eventHandler() {
 		$('body').toggleClass('fixed2');
 	})
 
+	let mainSlider = document.querySelector('.sProdHead__slider-lg--js');
 
-	var main = new Splide('.sProdHead__slider-lg--js', { 
-		rewind: true,
-		// pagination: false,
-		// arrows: false,
-	});
+	if (mainSlider) {
 
-	var thumbnails = new Splide('.sProdHead__slider-sm--js', {
-		// autoWidth: true,
-		direction: 'ttb',
-		height: '100%',
-		gap: 10,
-		// perPage: 5,
-		autoWidth: true,
-		rewind: true,
-		pagination: false,
-		isNavigation: true,
-		arrows: false,
-	});
+		var main = new Splide('.sProdHead__slider-lg--js', { 
+			rewind: true,
+			// pagination: false,
+			// arrows: false,
+		});
 
-	main.sync(thumbnails);
-	main.mount();
-	thumbnails.mount();
+		var thumbnails = new Splide('.sProdHead__slider-sm--js', {
+			// autoWidth: true,
+			direction: 'ttb',
+			height: '100%',
+			gap: 10,
+			// perPage: 5,
+			autoWidth: true,
+			rewind: true,
+			pagination: false,
+			isNavigation: true,
+			arrows: false,
+		});
+		
+		main.sync(thumbnails);
+		main.mount();
+		thumbnails.mount();
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

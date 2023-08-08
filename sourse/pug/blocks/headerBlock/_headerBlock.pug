@@ -8,3 +8,14 @@ mixin headerBlock()
 				p Поможем выбрать оборудование, разместим его в&nbsp;мощном дата-центре, настроим и&nbsp;возьмём на&nbsp;себя обслуживание.
 				a.btn.btn-white(data-fancybox data-type="ajax" href="modal/call.html") Оставьте заявку
 	// end headerBlock
+
+mixin headerBlock04()
+	// start headerBlock
+	+b.headerBlock#headerBlock&attributes(attributes)
+		.container
+			+b.section-title
+				+img("img/data-header.png")
+				h1 Дата-центр
+				p Вам не&nbsp;нужно самостоятельно арендовать помещение или устанавливать шумное оборудование дома&nbsp;&mdash; мы&nbsp;разместим ваш майнер в&nbsp;дата-центре. Возьмём на&nbsp;себя доставку, настройку, мониторинг и&nbsp;техническое обслуживание.
+				a.btn.btn-white(data-fancybox data-type="ajax" href="modal/call.html") Оставьте заявку
+	// end headerBlock
