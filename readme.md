@@ -10,3 +10,10 @@
 10. <https://megafronteam.github.io/0001mining/public/13-blog.html>
 11. <https://megafronteam.github.io/0001mining/public/14-text.html>
 12. <https://megafronteam.github.io/0001mining/public/00-modal.html>
+5. <https://megafronteam.github.io/0001mining/public/09-shipping&payments.html>
+6. <https://megafronteam.github.io/0001mining/public/10-contacts.html>
+7. <https://megafronteam.github.io/0001mining/public/11-calc.html>
+8. <https://megafronteam.github.io/0001mining/public/12-about.html>
+9. <https://megafronteam.github.io/0001mining/public/13-blog.html>
+10. <https://megafronteam.github.io/0001mining/public/14-text.html>
+11. <https://megafronteam.github.io/0001mining/public/00-modal.html>

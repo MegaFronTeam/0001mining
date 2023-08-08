@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Калькулятор майнинга</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<link href="libs/@splidejs/splide/css/splide.min.css" rel="stylesheet"/>
+		<link href="libs/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<div class="breadcrumb-slider--js splide">
+							<nav class="splide__track" aria-label="breadcrumb">
+								<ol class="breadcrumb splide__list" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+									<li class="breadcrumb-item splide__slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+											<meta itemprop="position" content="1"/></a></li>
+									<li class="breadcrumb-item active splide__slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Калькулятор майнинга</span>
+											<meta itemprop="position" content="2"/></a></li>
+								</ol>
+							</nav>
+						</div>
+						<h1>Калькулятор майнинга</h1> 
+						<p>Доходность майнинга в асиках</p>
+					</div>
+				</div>
+				<!-- start sCalc-->
+				<section class="sCalc section" id="sCalc">
+					<div class="container">
+						<div class="sCalc__head">
+							<div class="form-wrap row">
+								<div class="form-wrap__col col-auto">
+									<div class="form-wrap__text-up">Цена на электроэнергию:
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="number" type="number" inputmode="number" placeholder="" step="any"/>
+										<div class="small">₽/кВт ч</div>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="form-wrap__col col-auto">
+									<div class="form-wrap__text-up">Комиссия пула:
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="number" type="number" inputmode="number" placeholder="" step="any"/>
+										<div class="small">%</div>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-12 d-md-none"></div>
+								<div class="form-wrap__col col-auto">
+									<div class="form-wrap__text-up">Выбор валюты:
+									</div>
+									<div class="form-wrap__input-wrap form-group">
+										<select class="form-wrap__input form-select" name="select">
+											<option value="₽">₽</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="form-wrap__col col-xl-auto col">
+									<div class="form-wrap__text-up">Курс доллара к рублю:
+									</div>
+									<div class="form-wrap__curs">91.35 ₽
+									</div>
+								</div>
+								<div class="form-wrap__col-search col-xl">
+									<div class="form-wrap__text-up"> 
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" inputmode="search" placeholder="Какой у вас майнер?"/>
+										<button class="btn">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+							</div>
+						</div>
+						<div class="sCalc__body">
+							<table id="myTable">
+								<thead>
+									<tr>
+										<th>Ваш майнер</th>
+										<th>Потребление</th>
+										<th>Хэшрейт</th>
+										<th>Монета</th>
+										<th>Расходы</th>
+										<th>Доход
+											<div class="small">(чистыми в день)</div>
+										</th>
+										<th>Доход
+											<div class="small">(чистыми в месяц)</div>
+										</th>
+										<th class="text-center">
+											<svg class="iconC iconC-basketB ">
+												<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+											</svg>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M56S</a></td>
+												<td data-title="Потребление">5400 Ватт</td>
+												<td data-title="Хэшрейт">320 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M56++</a></td>
+												<td data-title="Потребление">5400 Ватт </td>
+												<td data-title="Хэшрейт">255 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M56</a></td>
+												<td data-title="Потребление">5400 Ватт</td>
+												<td data-title="Хэшрейт">238 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M53S++</a></td>
+												<td data-title="Потребление">5400 Ватт</td>
+												<td data-title="Хэшрейт">338 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M53</a></td>
+												<td data-title="Потребление">6554 Ватт </td>
+												<td data-title="Хэшрейт">330 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M50S++  </a></td>
+												<td data-title="Потребление">5400 Ватт</td>
+												<td data-title="Хэшрейт">226 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M50S</a></td>
+												<td data-title="Потребление">3276 Ватт</td>
+												<td data-title="Хэшрейт">216 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td data-title=" Ваш майнер"><a class="tdu link-info" href="#">microbtWHATSMINER M50</a></td>
+												<td data-title="Потребление">3306 Ватт</td>
+												<td data-title="Хэшрейт">200 Th/s</td>
+												<td data-title=" Монета"> <a class="tdu link-info" href="#">BTC </a></td>
+												<td class="small" data-title="Расходы"> 
+													<div class="sCalc__text">648 ₽ в день 
+													</div>19 440 ₽ в месяц
+												</td>
+												<td class="small" data-title="Доход (чистыми в день)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="small" data-title="Доход (чистыми в месяц)">
+													 1 401,95 ₽
+													<div class="text-secondary">0.00075 BTC</div>
+												</td>
+												<td class="text-center"> 
+													<div class="sCalc__delete">
+														<svg class="iconC iconC-basketB ">
+															<use xlink:href="img/svg/spriteC.svg#basketB"></use>
+														</svg>
+													</div>
+												</td>
+											</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- end sCalc-->
+				<script></script>
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/@splidejs/splide/js/splide.min.js"> </script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/datatables/media/js/jquery.dataTables.min.js"></script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => { 
+				$('#myTable').DataTable({
+					paging: false,
+					 searching: false,
+				});
+			});
+		</script>
+	</body>
+</html>

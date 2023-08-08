@@ -1,0 +1,75 @@
+mixin sCalc(data)
+	// start sCalc
+	+b.SECTION.sCalc.section#sCalc&attributes(attributes)
+		.container
+			+e.head
+				+b.form-wrap.row
+					+e.col.col-auto
+						+e.text-up Цена на электроэнергию:
+						+input("",'number')(value="5")
+							.small ₽/кВт ч
+					+e.col.col-auto
+						+e.text-up Комиссия пула:
+						+input("",'number')(value="0")
+							.small %
+					.col-12.d-md-none
+					+e.col.col-auto
+						+e.text-up Выбор валюты:
+						+input("₽",'select')
+					+e.col.col-xl-auto.col
+						+e.text-up Курс доллара к рублю:
+						+e.curs 91.35 ₽
+					+e.col-search.col-xl
+						+e.text-up 
+						+input("Какой у вас майнер?",'text','','search')(value="0")
+							button.btn
+								+icon("search")
+			+e.body
+				table#myTable
+					thead
+						tr
+							th Ваш майнер
+							th Потребление
+							th Хэшрейт
+							th Монета
+							th Расходы
+							th Доход
+								.small (чистыми в день)
+							th Доход
+								.small (чистыми в месяц)
+							th.text-center
+								+iconC("basketB")
+					tbody
+						mixin tr(t1, t2, t3)
+							tr
+								td(data-title=' Ваш майнер')
+									a(href="#").tdu.link-info= t1
+								td(data-title='Потребление')= t2
+								td(data-title='Хэшрейт')= t3
+								td(data-title=' Монета') 
+									a(href="#").tdu.link-info BTC 
+								td.small(data-title='Расходы') 
+									+e.text 648 ₽ в день 
+									| 19 440 ₽ в месяц
+								td.small(data-title='Доход (чистыми в день)') 
+									| 1 401,95 ₽
+									.text-secondary 0.00075 BTC
+								td.small(data-title='Доход (чистыми в месяц)') 
+									| 1 401,95 ₽
+									.text-secondary 0.00075 BTC
+								td.text-center() 
+									+e.delete
+										+iconC("basketB")
+						+tr(`microbtWHATSMINER M56S`,`5400 Ватт`,`320 Th/s`)
+						+tr(`microbtWHATSMINER M56++`,`5400 Ватт `,`255 Th/s`)
+						+tr(`microbtWHATSMINER M56`,`5400 Ватт`,`238 Th/s`)
+						+tr(`microbtWHATSMINER M53S++`,`5400 Ватт`,`338 Th/s`)
+						+tr(`microbtWHATSMINER M53`,`6554 Ватт `,`330 Th/s`)
+						+tr(`microbtWHATSMINER M50S++  `,`5400 Ватт`,`226 Th/s`)
+						+tr(`microbtWHATSMINER M50S`,`3276 Ватт`,`216 Th/s`)
+						+tr(`microbtWHATSMINER M50`,`3306 Ватт`,`200 Th/s`)
+		
+	// end sCalc
+	script
+		include script.js
+

@@ -1,0 +1,34 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sCalc/_sCalc.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= null
+
+block title
+	- let  title= 'Калькулятор майнинга'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	//- a(data-fancybox data-type="ajax" href="modal/test.html") тест
+	main
+		+page-head(title,title) 
+			p Доходность майнинга в асиках
+		+sCalc
+	+parts('footer')
+block scripts
+	script.
+		document.addEventListener('DOMContentLoaded', () => { 
+			$('#myTable').DataTable({
+				paging: false,
+				 searching: false,
+			});
+		});
+
+
+

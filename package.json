@@ -45,9 +45,11 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.16",
     "@splidejs/splide": "^4.1.4",
+    "datatables": "^1.10.18",
+    "datatables.net-dt": "^1.13.6",
     "inputmask": "^5.0.8",
-    "jquery": "^3.7.0",
     "ion-rangeslider": "^2.3.1",
+    "jquery": "^3.7.0",
     "swiper": "^10.1.0"
   }
 }

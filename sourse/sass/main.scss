@@ -71,8 +71,13 @@ $output-bourbon-deprecation-warnings: false;
 // Utilities
 @import "./node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
-
+.breadcrumb-slider--js{
+	.splide__track{
+		overflow: visible;
+	}
+}
 .breadcrumb {
+	flex-wrap: nowrap;
   a{
     color: $secondary;
     border-bottom: 1px solid  ;

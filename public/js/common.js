@@ -58,6 +58,20 @@ function eventHandler() {
 	// 		draggable: true,
 	// 	},
 	// });
+	let breadcrumbliders = document.querySelectorAll('.breadcrumb-slider--js');
+	if(breadcrumbliders.length) {
+
+		for (const item of breadcrumbliders) {
+			
+			new Splide(item, {
+				autoWidth: true,
+				perMove: 1,
+				gap: 0,
+				arrows: false,
+				pagination: false,
+			}).mount();
+		}
+	}
 	let catalogsliders = document.querySelectorAll('.sCatalog__slider--js');
 	if(catalogsliders.length) {
 
