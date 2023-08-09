@@ -11,6 +11,7 @@ class JSCCommon {
 
 		Fancybox.bind(link, {
 			arrows: false,
+			compact: false,
 			// // infobar: false,
 			touch: false,
 			trapFocus: false,
@@ -78,6 +79,7 @@ class JSCCommon {
 			Hash: false,
 			closeButton: true,
 			Thumbs: false,
+			compact: false,
 				Toolbar: {
 					// enabled: true,
 					display: {

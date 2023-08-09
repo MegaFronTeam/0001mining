@@ -10,4 +10,3 @@
 9. <https://megafronteam.github.io/0001mining/public/12-about.html>
 10. <https://megafronteam.github.io/0001mining/public/13-blog.html>
 11. <https://megafronteam.github.io/0001mining/public/14-text.html>
-12. <https://megafronteam.github.io/0001mining/public/00-modal.html>
