@@ -12,10 +12,10 @@ mixin sStories(data)
 						+e.slider--js.splide
 							+arrow2()
 							.splide__track
-								.splide__list
+								.splide__list#stories
 									mixin item(i,t)
 										+e.slide.splide__slide
-											+e.item.bg-wrap
+											+e.item.bg-wrap(href=`img/y.jpg` data-fancybox="stories").stories
 												+img(`img/story-${i}.jpg`,'bg').img-bg
 												p!= t
 									+item(`1`,`Как добраться до офиса`)

@@ -6,10 +6,7 @@ class JSCCommon {
 			autoFocus: false,
 			placeFocusBack: false,
 		};
-		Fancybox.bind('[data-fancybox]', {
-			autoFocus: false,
-			placeFocusBack: false,
-		});
+		Fancybox.bind('[data-fancybox]');
 		 
 
 		Fancybox.bind(link, {
@@ -39,7 +36,80 @@ class JSCCommon {
 				AJAX_FORBIDDEN: "Ошибка при загрузке AJAX: запрещено",
 				IFRAME_ERROR: "Ошибка загрузки iframe",
 			},
-		});
+			}
+		);
+
+
+		//** Step 1: Get a reference to a Fancybox instance
+		// const fancybox = Fancybox.getInstance();
+
+		//** Step 2: Get a reference to a Carousel Autoplay plugin
+		// const autoplay = fancybox.plugins.Slideshow.ref; 
+
+		//** Step 3: Use any Carousel Autoplay API method, for example:
+
+		// Start autoplay
+		// autoplay.start();
+
+		var Timer = function (callback, delay) {
+			var timerId, start, remaining = delay;
+
+			this.pause = function () {
+				window.clearTimeout(timerId);
+				timerId = null;
+				remaining -= Date.now() - start;
+			};
+
+			this.resume = function () {
+				if (timerId) {
+					return;
+				}
+
+				start = Date.now();
+				timerId = window.setTimeout(callback, remaining);
+			};
+
+			this.resume();
+		};
+ 
+		let StoriesSpeed = 8000;
+		Fancybox.bind('.stories', {
+			mainClass: 'stories-modal',
+			Hash: false,
+			closeButton: true,
+			Thumbs: false,
+				Toolbar: {
+					// enabled: true,
+					display: {
+						left: [  ],
+						middle: [ ],
+						right: [ ],
+					}
+				}, 
+			Slideshow: {
+				playOnStart: true,
+				progressParentEl: (slideshow) => {
+					return (
+						slideshow.instance.container?.querySelector(
+							".fancybox__viewport"
+						) || slideshow.instance.container
+					);
+				},
+				timeout: StoriesSpeed,
+			},
+			Images: {
+				content: (_ref, slide) => {
+					let rez = "<div class='img-wrap-with-progress'><div class='modal-progress'><div class='modal-progress__bar'></div></div>";
+
+					rez += `<img src="${slide.src}" class="fancybox-image" alt="" />`;
+
+					rez += "</div>";
+
+					return rez;
+				},
+			},
+		});    
+		
 		document.querySelectorAll(".modal-close-js").forEach(el => {
 			el.addEventListener("click", () => {
 				Fancybox.close();

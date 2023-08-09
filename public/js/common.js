@@ -90,8 +90,7 @@ function eventHandler() {
 	let storiesSliders = document.querySelector('.sStories__slider--js');
 	if (storiesSliders) {
 
-		new Splide(storiesSliders,{
-			type: 'loop',
+		new Splide(storiesSliders,{ 
 			perPage: 1,
 			perMove: 1,
 			gap: '1rem',
@@ -195,6 +194,9 @@ function eventHandler() {
 		main.mount();
 		thumbnails.mount();
 	}
+
+
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

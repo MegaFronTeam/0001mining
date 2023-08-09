@@ -629,3 +629,55 @@ h3{
 .row--lg{
 	--bs-gutter-x: 49px
 }
+
+.stories-modal{
+  .fancybox__content{
+		aspect-ratio: auto !important;
+		width: initial;
+		height: initial;
+	}
+	.fancybox__slide.has-close-btn {
+		padding-bottom: 40px;
+	}
+	.f-progress{
+		display: none !important;
+	}
+}
+
+.modal-progress{
+	position: absolute;
+	top: 26px;
+	left: 18px;
+	width: calc(100% - 36px);
+	height: 2px;
+	background-color: rgba(255, 255, 255, 0.5);
+	&__bar{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #fff;
+		// background-color: red;
+		width: 100%;
+		transform-origin: left top;
+		transform: scaleX(0);
+		animation-fill-mode: both ;
+	}
+}
+
+.is-selected{
+	.modal-progress__bar{
+		animation: slideIn 7.5s linear ;
+	}
+}
+
+@keyframes slideIn{
+	0%{ 
+    transform: scaleX(0);
+  }
+	100%{ 
+    transform: scaleX(1);
+  }
+}
+
