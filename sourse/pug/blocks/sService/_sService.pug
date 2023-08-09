@@ -1,0 +1,37 @@
+mixin service-item(i,title,descr)
+	+e.item.col-lg-6
+		+img(`img/icon-${i}.png`)
+		+e.item-text
+			+e.item-title!= title
+			+e.item-descr!= descr
+
+mixin sService(data)
+	// start sService
+	+b.SECTION.sService.section#sService&attributes(attributes)
+		.container
+			+e.article.ARTICLE
+				+b.section-title
+					h2 Как мы обслуживаем майнеры
+				+e.row.row
+					+service-item('12','Удалённо','Созваниваемся с&nbsp;по&nbsp;видеосвязи и&nbsp;проводим диагностику. В&nbsp;большинстве случаев для решения проблемы достаточно звонка.')
+					+service-item('13','Оперативно','В&nbsp;среднем, ремонт занимает&nbsp;Х дней. Чтобы максимально сократить сроки, сервис работает круглосуточно.')
+					+service-item('5','В сервисном центре или дата-центре','Когда проблему нельзя решить удалённо, мы&nbsp;сами забираем майнер на&nbsp;ремонт. Если майнер установлен в&nbsp;нашем дата-центре&nbsp;&mdash; чиним на&nbsp;месте.')
+					+service-item('6','По&nbsp;гарантии&nbsp;&mdash; бесплатно','Если вы&nbsp;купили майнер у&nbsp;нас и&nbsp;гарантийный период ещё не&nbsp;истёк&nbsp;&mdash; ремонт бесплатный.')
+			+e.article.ARTICLE
+				+b.section-title
+					h2 Что делаем
+				+e.steps-list.OL
+					+e.step.LI
+						+e.step-title Ремонтируем&nbsp;то, что можно починить
+						+e.step-descr Когда неисправность можно устранить без замены комплектующих, мы&nbsp;это сделаем. Наша задача&nbsp;&mdash; сэкономить ваши деньги.
+					+e.step.LI
+						+e.step-title Меняем&nbsp;то, что починить нельзя
+						+e.step-descr Если компоненты не&nbsp;подлежат ремонту, мы&nbsp;заменяем их&nbsp;на&nbsp;новые. Используем только оригинальные комплектующие.
+					+e.step.LI
+						+e.step-title Обновляем&nbsp;то, что устарело
+						+e.step-descr Устанавливаем новые версии программ, чтобы сократить количество ошибок и&nbsp;повысить производительность вашего майнера,.
+					+e.step.LI
+						+e.step-title Помогаем сохранить&nbsp;то, что работает
+						+e.step-descr Пыль в&nbsp;майнере ведёт к&nbsp;перегреву и&nbsp;поломке. Мы&nbsp;проводим профилактическую очистку, чтобы ничто не&nbsp;мешало охлаждению устройства.
+
+	// end sService

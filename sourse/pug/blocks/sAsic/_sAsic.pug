@@ -1,0 +1,47 @@
+mixin reason(i, title, descr)
+	+e.reason.LI
+		+img(`img/icon-${i}.png`)
+		+e.reason-title!= title
+		+e.reason-descr!= descr
+
+mixin table-row(td1,td2,td3)
+	tr
+		td(data-title='Ваш майнер')= td1
+		td(data-title='Разгоним до')= td2
+		td(data-title='Стоимость')= td3
+
+mixin sAsic(data)
+	// start sAsic
+	+b.SECTION.sAsic.section#sAsic&attributes(attributes)
+		.container
+			+e.article.ARTICLE
+				+b.section-title
+					h2 Зачем разгонять &laquo;асик&raquo; у&nbsp;специалистов
+				+e.reason-list.UL
+					+reason('14','Реальная польза', 'Подбираем проверенную прошивку для разгона конкретной модели, расширяем функционал и&nbsp;объясняем, как пользоваться программой.')
+					+reason('15','Дешевле, чем новый майнер','Новый асик с&nbsp;нужной производительностью может стоить в&nbsp;20&nbsp;раз дороже, чем разгон старого. Перепрошивка увеличит мощность оборудования с&nbsp;минимальными затратами.')
+					+reason('6','Гарантия безопасности','Если вы&nbsp;самостоятельно скачиваете прошивку из&nbsp;интернета, то&nbsp;рискуете установить вредоносный софт и&nbsp;сломать устройство. Мы&nbsp;устанавливаем только надёжное&nbsp;ПО.')
+					+reason('16','Техника — в умелых руках','Замена прошивки&nbsp;&mdash; сложный процесс, который лучше доверить профессионалам. Если у&nbsp;вас нет опыта, установка даже официального софта может привести к&nbsp;ошибкам в&nbsp;работе и&nbsp;поломке.')
+					+reason('17','Дополнительные бонусы','Основная цель разгона&nbsp;&mdash; ускорить асик, но&nbsp;параллельно можно решить и&nbsp;другие задачи. Например, снизить энергопотребление, повысить стабильность работы и&nbsp;продлить срок службы оборудования.')
+			+e.article--table.ARTICLE
+				+b.section-title
+					h2 Как мы&nbsp;увеличим эффективность вашего майнера
+				p Научим майнер добывать криптовалюту быстрее, чем задумано производителем. Максимальная частота хеширования и&nbsp;стоимость услуги зависят от&nbsp;модели устройства.
+				+e.table.TABLE
+					thead
+						tr
+							th Ваш майнер
+							th Разгоним до
+							th Стоимость
+					tbody
+						+table-row('Bitmain S19', '110–130 TH/s', '10 000 ₽')
+						+table-row('Antminer Bitmain S19J PRO 88–104 TH/s', '120–160 TH/s', '12 000 ₽')
+						+table-row('Antminer Bitmain S19 PRO 88–104 TH/s', '120–160 TH/s', '12 000 ₽')
+						+table-row('Antminer Bitmain S19 PRO 110 TH/s', '120–160 TH/s', '12 000 ₽')
+						+table-row('Antminer Bitmain S19 XP', '150–210 TH/s', '20 000 ₽')
+						+table-row('Antminer Bitmain L7 8800–9500 MH/s', '10000–12500 MH/s', '20 000 ₽')
+						+table-row('Antminer Bitmain KA3', 'x', '15 000 ₽')
+						+table-row('Antminer Bitmain D9', 'x', '15 000 ₽')
+						+table-row('Antminer Bitmain HS3', '9500-12000 MH/s', '15 000 ₽')
+	// end sAsic
+

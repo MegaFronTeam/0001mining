@@ -1,0 +1,30 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+ 
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sService/_sService.pug 
+include ../blocks/sAsic/_sAsic.pug 
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Разгон ASIC-майнеров'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	//- a(data-fancybox data-type="ajax" href="modal/test.html") тест
+	main
+		+headerBlock(`asic-header`,`Разгон ASIC-майнеров`,`Разгон майнера&nbsp;&mdash; это установка новой прошивки, благодаря которой растёт тактовая частота, а&nbsp;с&nbsp;ней и&nbsp;производительность. Когда &laquo;асик&raquo; работает быстрее, он&nbsp;приносит больший доход.`)
+		+sAsic
+		+sForm05
+	+parts('footer')
+
+
+
