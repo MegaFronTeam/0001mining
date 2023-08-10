@@ -56,6 +56,9 @@
 	td{
 		font-weight: 300;
 		.small{}
+		a{
+			--bs-info-rgb: 13, 105, 242 ;
+		}
 	}
 @include media-breakpoint-up(xl) {
 
@@ -100,14 +103,24 @@
 				}
 		}
 	}
+	.form-wrap__col{
+		&:nth-child(5){
+			// display: none;
+				@include media-breakpoint-down(lg){
+					.form-wrap__text-up{
+						max-width: rem(150px);
+					}
+				}
+		}
+	}
 	.form-wrap{
-
 		&__text-up{
 			font-weight: 300;
 			color: #8C8C8C;
 			min-height: 1em;
 			margin-bottom: rem(14);
 			text-wrap:  balance;
+			line-height: normal;
 		}
 		&__input-wrap{
 			position: relative;
@@ -196,7 +209,7 @@
 			background: #EEF0F0 !important;
 			flex-wrap: wrap;
 			margin-bottom: rem(46);
-			padding: 0 rem(24);
+			padding: 10px rem(24);
 		}
 		td{
 			border: none;
@@ -209,8 +222,12 @@
 			width: 25%;
 			box-sizing: border-box;
 			padding: 20px 0 !important;
+			font-size: 15px;
 			&:first-child{
 				width: 50%;
+			}
+			&:nth-child(1){
+				font-size: 17px;
 			}
 			&:nth-child(1),
 			&:nth-child(2),
@@ -220,14 +237,21 @@
 			}
 		}
 		td:not(:last-child) {
-			&::before{
-				content: attr(data-title);
-				display: block;
+			// &::before{
+			// 	content: attr(data-title);
+			// 	display: block;
+			// 	color: #999; 
+			// 	font-size: 12px;
+			// 	font-style: normal;
+			// 	font-weight: 300;
+			// 	margin-bottom: rem(5); 
+			// }
+			.before{
 				color: #999; 
-				font-size: 12px;
+				font-size: 13px;
 				font-style: normal;
 				font-weight: 300;
-				margin-bottom: rem(5);
+				margin-bottom: rem(5); 
 			}
 		} 
 		td:nth-child(6),
@@ -272,6 +296,9 @@
 				display: inline-block;
 				&::after{
 					content: ' / ';
+					margin-left: 6px;
+					margin-right: 10px;
+					display: inline-block;
 				}
 			}
 		}

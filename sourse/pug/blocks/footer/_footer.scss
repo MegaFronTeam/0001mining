@@ -51,23 +51,32 @@
 		}
 		li{
 			margin-bottom: 5px;
-			font-size: rem(15);
+			font-size: 12px;
 			@include media-breakpoint-up(sm) {
-
+				
 				font-size: rem(17);
 			}
-
+			
 		}
-	
+		
 	}
 	.top-nav__tel{
-		font-size: rem(21);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(21);
+		}
+		font-size: 14px;
 	}
 	.top-nav__link{
+		@include media-breakpoint-up(sm) {
 		font-size: rem(17);
+		}
+		font-size: 12px;
 	}
 	p{
-		margin-top: 20px;
+		@include media-breakpoint-up(sm){
+
+			margin-top: 20px;
+		}
 		font-size: rem(15);
 		a{
 			@extend .tdu;
@@ -125,4 +134,14 @@
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+}
+
+@include media-breakpoint-down(sm) {
+	.row-footer-lg{
+		--bs-gutter-x: 43px;
+		--bs-gutter-y: 30px;
+		ul{
+			margin-bottom: 0;
+		}
+	}
 }

@@ -29,17 +29,25 @@
 
 .icon-item{
 	padding: rem(30);
-	border-radius: rem(25px);
+	@include media-breakpoint-up(sm) {
+		border-radius: rem(25px);
+	}
+	border-radius: 15px;
 	border: 1px solid #D5DFDF;
 	min-height: 100%;
 	.row{
 		--bs-gutter-x: 17px;
+		@include media-breakpoint-down(sm) {
+			align-items: center;
+		}
 		
 	}
 	&__img-wrap{
 		width: 60px;
-		margin-bottom: rem(16);
-		min-height: rem(60);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(16);
+			min-height: rem(60);
+		}
 		img{
 			@extend .res-i;
 		}
@@ -49,6 +57,11 @@
 		font-weight: 500;
 	}
 	p{
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 0;
+			max-width: 210px;
+			// text-wrap: balance;
+		}
 		font-size: rem(17);
 		font-weight: 300;
 		line-height: 124.688%; /* 21.197px */

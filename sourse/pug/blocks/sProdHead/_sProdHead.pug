@@ -54,7 +54,7 @@ mixin sProdHead(data)
 							.col
 								a.btn.btn-primary.w-100(href="#") Купить в 1 клик
 							+e.link-col.col-auto
-								+e.link-l(href="#").td-dsh Купить в лизинг
+								+e.link-l(href="#").td-dsh.fw-500 Купить в лизинг
 						.row.g-1.align-items-center.mb-4
 							.col-auto
 								img(src="img/tinn.png", alt="")
@@ -66,24 +66,26 @@ mixin sProdHead(data)
 							li Возможна опалата как юр. лицо с НДС
 							li Сервисное обсулуживание
 				.col
-					.h5.fw-600 Характеристики
-					p Хэшрейт — 118 TH/s
-					p Алгоритм — SHA-256
-					p Потребление, Вт/ч — 3480 ± 5%
-					p Добываемые монеты — BTC/BCH
-					.fw-500.pb-1
-						+e.link.td-dsh.text-body(href="#")  Все характеристики
-					hr
-					.h5.fw-600  Прибыль:
-					table.w-100.mb-3
-						tr
-							td.pb-2 (от майнинга за 24 ч.)
-							td.pb-2.fw-600 $8.84 / 746₽
-						tr.h5.fw-600 
-							td Окупаемость:
-							td.fw-600 194 дня
+					+e.list
+						.h5.fw-600.mono Характеристики
+						.mb-4.ms-1
+							p.mb-1 Хэшрейт — 118 TH/s
+							p.mb-1 Алгоритм — SHA-256
+							p.mb-1 Потребление, Вт/ч — 3480 ± 5%
+							p.mb-1 Добываемые монеты — BTC/BCH
+						.fw-500.pb-3
+							+e.link.td-dsh.text-body(href="#")  Все характеристики
+						hr.mb-4
+						.h5.fw-600.mono  Прибыль:
+						table.w-100.mb-4
+							tr
+								td.pb-3 (от майнинга за 24 ч.)
+								td.pb-3.fw-600 $8.84 / 746₽
+							tr
+								td.mono.h5 Окупаемость:
+								td.fw-600.pt-1 194 дня
 
-					.fw-500
-						+e.link.td-dsh.text-body(href="#") Рассчитать доход
+						.fw-500
+							+e.link.td-dsh.text-body(href="#") Рассчитать доход
 
 	// end sProdHead

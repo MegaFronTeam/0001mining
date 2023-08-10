@@ -6,10 +6,16 @@
 	@include media-breakpoint-up(md) {
 		
 		--bs-body-font-size: #{$em-base};
+	};
+
+	--sPT: 40px;
+	--sPB: 40px;
+	@include media-breakpoint-up(sm) {
+		--sPT: #{rem(60)};
+		--sPB: #{rem(60)};
+		--sTPB: #{rem(40)};
 	}
-	--sPT: #{rem(60)};
-	--sPB: #{rem(60)};
-	--sTPB: #{rem(40)};
+	--sTPB: 28px;
 
 	// --sPT: #{rem(80 * .5)};
 	// --sPB: #{rem(90 * .5)};

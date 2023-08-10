@@ -529,7 +529,7 @@ iframe {
 
 // .btn-outline-light,
 // .btn-outline-primary{
-// 	--bs-btn-color: #{$body-color};
+// 	--bs-btn-color: #{$primary};
 // }
 
 .btn,
@@ -681,3 +681,14 @@ h3{
   }
 }
 
+
+@include media-breakpoint-down(md) {
+	.container{
+		padding-left: 20px;
+		padding-right: 20px;
+		.container{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

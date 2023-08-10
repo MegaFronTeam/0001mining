@@ -42,19 +42,28 @@ mixin sCalc(data)
 					tbody
 						mixin tr(t1, t2, t3)
 							tr
-								td(data-title=' Ваш майнер')
+								td()
+									.before.d-xl-none Ваш майнер
 									a(href="#").tdu.link-info= t1
-								td(data-title='Потребление')= t2
-								td(data-title='Хэшрейт')= t3
-								td(data-title=' Монета') 
+								td( )
+									.before.d-xl-none  Потребление
+									= t2
+								td( )
+									.before.d-xl-none  Хэшрейт
+									= t3
+								td() 
+									.before.d-xl-none  Монета
 									a(href="#").tdu.link-info BTC 
-								td.small(data-title='Расходы') 
+								td.small( ) 
+									.before.d-xl-none  Расходы
 									+e.text 648 ₽ в день 
 									| 19 440 ₽ в месяц
-								td.small(data-title='Доход (чистыми в день)') 
+								td.small() 
+									.before.d-xl-none  Доход  <br>  (чистыми в день)
 									| 1 401,95 ₽
 									.text-secondary 0.00075 BTC
-								td.small(data-title='Доход (чистыми в месяц)') 
+								td.small() 
+									.before.d-xl-none  Доход  <br>  (чистыми в месяц)
 									| 1 401,95 ₽
 									.text-secondary 0.00075 BTC
 								td.text-center() 

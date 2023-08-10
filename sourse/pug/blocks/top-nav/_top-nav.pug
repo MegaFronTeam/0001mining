@@ -21,7 +21,7 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin btn()
 	+e.btn--catalog.btn.btn-outline-primary(href="#")
-		+iconC("menu")
+		+icon("menu")
 		| Каталог
 mixin upmenu()
 	ul
@@ -77,7 +77,7 @@ mixin top-nav()
 					+btns().d-none.d-md-block
 					+e.contacts-col.col-auto.text-xl-start.text-end
 						
-						+e.tel(href="+7(499)-719-55-88").text-body + 7(499)-719-55-88
+						+e.tel(href="+7(499)-719-55-88").text-body +7 (499) 719-55-88
 						br
 						+e.link.tdu(data-fancybox data-type="ajax" href="modal/call.html").text-body Заказать звонок
 					.col-auto.d-none.d-md-block

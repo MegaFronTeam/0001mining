@@ -67,6 +67,11 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(18 / var(--h) *1em );
 }
+.icon-menu {
+	--h: 15;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(19 / var(--h) *1em );
+}
 .icon-rateStar {
 	--h: 14;
 	font-size:calc( var(--h) / 10 * 1rem);

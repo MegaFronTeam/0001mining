@@ -8,10 +8,10 @@ mixin catalogFilter(data)
 					+e.toggle.toggle-filter-mobile-js.on
 						span
 		+e.body.dropdowns
-			.dropdown-item
-				label.form-check.form-switch.fw-600
-					.form-check-label  В наличии
-					input.form-check-input(type='checkbox' role='switch' checked='')
+			//- .dropdown-item
+			//- 	label.form-check.form-switch.fw-600
+			//- 		.form-check-label  В наличии
+			//- 		input.form-check-input(type='checkbox' role='switch' checked='')
 			mixin item(t, a)
 				+b.dropdown-item(class= a)&attributes(attributes)
 					+e.toggle.dd-head-js(class= a)

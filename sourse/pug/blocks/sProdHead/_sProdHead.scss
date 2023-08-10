@@ -115,6 +115,12 @@
 		background: #FFF;
 		border: 1px solid var(--light-gray, #D5DFDF);
 		margin-bottom: 60px;
+		.product-item__btn-icon .icon{
+			font-size: 20px;
+		}
+		.btn-primary{
+			box-shadow: 5px 4px 36px rgba(123, 83, 239, 0.20) !important;
+		}
 		@include media-breakpoint-up(md) {
 			margin-bottom: 0;
 			box-shadow: 0px 0px 32px 1px rgba(0, 0, 0, 0.10); 
@@ -177,6 +183,10 @@
 		.splide__pagination{
 			display: none !important; 
 		}
+	}
+
+	&__list{
+		max-width: 300px;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

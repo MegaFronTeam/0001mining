@@ -7,12 +7,12 @@ mixin sProdBody(data)
 					td(colspan=(!val ? "2" : ''))!= key
 					if val
 						td!= val
-			.tabs.tabs-slider--js.swiper
-				.tabs__caption.swiper-wrapper
-					.tabs__btn.swiper-slide.active Описание
-					.tabs__btn.swiper-slide Отзывы 
-					.tabs__btn.swiper-slide Характеристики
-					.tabs__btn.swiper-slide Доставка и оплата 
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Описание
+					.tabs__btn Отзывы 
+					.tabs__btn Характеристики
+					.tabs__btn Доставка и оплата 
 				.tabs__content.active
 					h3 Asis майнер Whatsmener M50 114th
 					h5 О товаре

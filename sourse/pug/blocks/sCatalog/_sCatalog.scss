@@ -2,7 +2,7 @@
 .sCatalog {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(0)};
 	&__row{
 		@include media-breakpoint-down(sm) {
 			--bs-gutter-x: 16px;
@@ -42,6 +42,8 @@
 		@include media-breakpoint-up(xl) {
 			padding-top: 30px;
 			padding-bottom: 30px;
+			margin-top: -30px;
+			margin-bottom: -30px;
 		}
 		@include media-breakpoint-down(xxl) {
 			overflow: visible;
@@ -69,6 +71,7 @@
 		font-size: 18px;
 		font-style: normal;
 		font-weight: 500;
+		margin-bottom: 2px;
 		.icon{
 			font-size: 22px;
 			margin-right: 10px;
@@ -121,7 +124,7 @@
 				display: block;
 			}
 			.product-item__btn{
-				margin-top: 16px;
+				margin-top: 6px;
 				width: 100%;
 				margin-bottom: 10px;
 			}
@@ -167,10 +170,13 @@
 }
 
 .product-item{
-	
+	.splide__pagination{
+		display: flex !important;
+		padding: 0;
+	}
 	.prod-tags{
 		position: absolute;
-		left: rem(17);
+		left: rem(0);
 		top: 0;
 		z-index: 5;
 	}
@@ -181,7 +187,7 @@
 	background: #FFF;
 	overflow: hidden;
 	position: relative;
-	padding: rem(20px) rem(10px) rem(40);
+	padding: rem(20px) rem(18) rem(35);
 	@include mt;
 	border: 1px solid var(--light-gray, #D5DFDF);
 	&:hover{
@@ -237,6 +243,7 @@
 		font-size: rem(13);
 		margin-bottom: auto;
 		padding-bottom: 13px;
+		font-weight: 300;
 	}
 	&__stock{
 		background:   $warning;
@@ -251,14 +258,16 @@
 		font-size: rem(13px); 
 		font-weight: 600; 
 		letter-spacing: -0.01em;
-		text-decoration: underline; 
+		text-decoration: line-through; 
 		color: #B1B1B1;
 	}
 	&__price{
 		font-size: rem(19px);
 		font-weight: 600;
 	}
-
+	&__btn{
+		width: rem(96);
+	}
 }
 
 .card-slider{

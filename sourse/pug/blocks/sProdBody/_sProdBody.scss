@@ -8,38 +8,65 @@
 		@include media-breakpoint-down(lg) {
 		}
 		&__caption {
-			@include roww('24px', '', 'm');
+			@include media-breakpoint-up(sm) {
+				@include roww('24px', '', 'm');
+				&::after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 200vw;
+					// max-width: rem(766);
+					height: 2px;
+					background-color: #f3f3f4;
+					left: -20vw;
+					bottom: 0;
+					border-radius: 3px;
+					@include media-breakpoint-up(lg) {
+						width: calc(100% - var(--bs-gutter-x));
+						left: calc(var(--bs-gutter-x) / 2); 
+					}
+				}
+			}
 			display: flex;
 			position: relative;
 			margin-bottom: rem(18);
+			@include media-breakpoint-down(sm) {
+				flex-wrap: wrap;
+				border-top: 1px solid #D5DFDF; 
+				margin-left: -20px;
+				margin-right: -20px;
+				
+			}
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(36);
-			}
-			&::after {
-				content: '';
-				position: absolute;
-				display: block;
-				width: 200vw;
-				// max-width: rem(766);
-				height: 2px;
-				background-color: #f3f3f4;
-				left: -20vw;
-				bottom: 0;
-				border-radius: 3px;
-				@include media-breakpoint-up(lg) {
-					width: calc(100% - var(--bs-gutter-x));
-					left: calc(var(--bs-gutter-x) / 2); 
-				}
 			}
 		}
 		&__btn {
 			@include mt;
-			padding-bottom: rem(10); 
 			font-weight: 300;
 			position: relative;
 			width: auto;
 			z-index: 10;
-			border-bottom: 2px solid transparent;
+			@include media-breakpoint-up(sm) {
+				padding-bottom: rem(10); 
+				border-bottom: 2px solid transparent;
+			}
+			@include media-breakpoint-down(sm) {
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 54px; 
+					border-bottom: 1px solid #D5DFDF !important;
+					&:nth-child(odd){
+						border-right: 1px solid #D5DFDF;
+					}
+					&.active,
+					&:active{
+						background: #EEE;
+					}
+
+			}
 			// &::after {
 			// 	@include mt;
 			// 	content: '';
@@ -53,13 +80,17 @@
 			// 	bottom: 0;
 			// 	z-index: 10;
 			// }
+			
 			&.active,
 			&:hover {
 				// &::after {
 				// 	background-color: $primary;
 				// }
 				font-weight: 500;
-				border-color: $primary;
+				@include media-breakpoint-up(sm) {
+
+					border-color: $primary;
+				}
 			}
 			span {
 				color: $secondary;
