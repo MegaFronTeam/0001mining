@@ -442,7 +442,7 @@ class JSCCommon {
 		this.heightwindow();
 		this.makeDDGroup();
 		this.disabledBtn();
-		// this.setScreen();
+		this.setScreen();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 

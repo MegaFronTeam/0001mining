@@ -2,6 +2,12 @@
 .sIcons {
 	// --sPT: #{rem(600)};
 	// --sPB: #{rem(60)};
+	&--page{
+		@include media-breakpoint-up(xl) {
+			--sPB: #{rem(52)};
+		}
+
+	}
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};

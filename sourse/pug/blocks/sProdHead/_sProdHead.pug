@@ -50,11 +50,11 @@ mixin sProdHead(data)
 										+icon("compare")
 									button.product-item__btn-icon.btn(type="button").active
 										+icon("like")
-						.row.align-items-center.g-3.mb-4
+						.row.align-items-center.g-3.mb-5
 							.col
 								a.btn.btn-primary.w-100(href="#") Купить в 1 клик
 							+e.link-col.col-auto
-								+e.link-l(href="#").td-dsh.fw-500 Купить в лизинг
+								+e.link-l(href="#").td-dsh.fw-500 Купить в&nbsp;лизинг
 						.row.g-1.align-items-center.mb-4
 							.col-auto
 								img(src="img/tinn.png", alt="")
@@ -75,7 +75,7 @@ mixin sProdHead(data)
 							p.mb-1 Добываемые монеты — BTC/BCH
 						.fw-500.pb-3
 							+e.link.td-dsh.text-body(href="#")  Все характеристики
-						hr.mb-4
+						hr
 						.h5.fw-600.mono  Прибыль:
 						table.w-100.mb-4
 							tr

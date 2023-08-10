@@ -2,13 +2,14 @@
 	--top-bg: #fff;
 	--link-color: #fff;
 	.top-nav {
+		// padding-top: rem(25);
 	}
 }
 .top-nav {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	padding-top: rem(25);
+	padding-top: rem(20);
 	.row{
 		@include media-breakpoint-down(sm) {
 
@@ -217,9 +218,12 @@
 
 .logo{
 	display: inline-flex; 
-	@include roww(em(15px),0, m);
+	@include roww(em(16px),0, m);
+	@include media-breakpoint-up(xxl) {
+		margin-right: 3px;
+	}
 	@include media-breakpoint-up(xl) {
-		
+		--bs-gutter-x: #{em(24)};
 		font-size: 12px;
 	}
 	

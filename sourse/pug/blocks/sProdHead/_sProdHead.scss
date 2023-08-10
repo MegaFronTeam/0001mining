@@ -7,12 +7,15 @@
 }
 .sProdHead {
 	--sPT: #{rem(0)};
-	--sPB: #{rem(0)};
+	--sPB: #{rem(32px)};
 	// --sTPB: #{rem()};
 	&__row-head{
-		margin-bottom: 50px;
+		margin-bottom: rem(40);
 		.review-wrap{
 			margin-top: 3px;
+		}
+		.review-wrap__stars .icon:not(:last-child) {
+			margin-right: rem(2);
 		}
 	}
 	&__row{
@@ -38,14 +41,14 @@
 
 	}
 	
-	--sm-slide: #{rem(81)};
+	--sm-slide: #{rem(76)};
 	&__slider-wrap{
 		margin-bottom: rem(80);
 		@include media-breakpoint-up(xl) {
 			display: grid;
 			margin-bottom: 0;
 			grid-template-columns: var(--sm-slide) 1fr;
-			gap: 20px;
+			gap: 18px;
 		}
 		.sProdHead__slider-sm{
 			@include media-breakpoint-up(xxl) {
@@ -116,7 +119,7 @@
 		border: 1px solid var(--light-gray, #D5DFDF);
 		margin-bottom: 60px;
 		.product-item__btn-icon .icon{
-			font-size: 20px;
+			font-size: 24px;
 		}
 		.btn-primary{
 			box-shadow: 5px 4px 36px rgba(123, 83, 239, 0.20) !important;
@@ -125,12 +128,17 @@
 			margin-bottom: 0;
 			box-shadow: 0px 0px 32px 1px rgba(0, 0, 0, 0.10); 
 			margin-left: auto;
+				@include media-breakpoint-up(xl){
+					margin-left: -40px;
+					max-width: rem(400);
+				}
 		max-width: rem(352);
 		border: none;
 		}
 		@include media-breakpoint-up(xxl) {
-			padding: rem(47) rem(39);
-			max-width: 100%;
+			padding: rem(47) rem(39) rem(20);
+			padding-right: 30px;
+			// max-width: 100%;
 		}
 		padding: rem(27) rem(19);
 		.product-item__stock{
@@ -187,6 +195,13 @@
 
 	&__list{
 		max-width: 300px;
+		@include media-breakpoint-up(xl) {
+			margin-top: rem(17);
+			margin-left: rem(5);
+		}
+		hr{
+			margin-bottom: rem(40);
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
