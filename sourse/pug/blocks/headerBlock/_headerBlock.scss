@@ -1,4 +1,12 @@
 // start .headerBlock
+.index-page .headerBlock {
+	.section-title__img-wrap{
+			@include media-breakpoint-up(lg) {
+
+				text-align: right;
+			}
+	}
+}
 .headerBlock {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
@@ -41,27 +49,45 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
+	.container{
 		position: relative;
-		max-width: rem(800);
+	}
+	.section-title{
+		// position: relative;
+		@include media-breakpoint-up(xxl) {
+			max-width: 70%;
+
+		}
+		@include media-breakpoint-up(lg) {
+		max-width: 50%;
+		}
 		margin-bottom: 0;
 		
-	}
-	img{
-		display: block;
-		@include media-breakpoint-up(lg) {
-			margin: 0;
-			position: absolute;
-			left: 90%;
-			@include a-cent1(y)
+		&__img-wrap{
+			width: 100%;
+			text-align: center;
+			@include media-breakpoint-up(lg) {
+				margin: 0;
+				position: absolute;
+				// left: 90%;
+				right: 0;
+				max-width: 50%;
+				@include a-cent1(y)
+			}
+			@include media-breakpoint-up(xxl) {
+		
+				max-width: 55%;
+			}
+			@include media-breakpoint-down(lg) {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+				height: auto;
+			}
+	
 		}
-		@include media-breakpoint-down(lg) {
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 100%;
-			height: auto;
-		}
 	}
+ 
 	&__col{
 
 	}

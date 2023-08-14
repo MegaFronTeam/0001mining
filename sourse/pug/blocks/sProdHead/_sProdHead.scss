@@ -11,6 +11,21 @@
 	// --sTPB: #{rem()};
 	&__row-head{
 		margin-bottom: rem(40);
+		@include media-breakpoint-down(xxl) {
+			--bs-gutter-x: 8px;
+			.review-wrap__stars{
+				.icon:not(:first-child){
+					display: none;
+				}
+			}
+			.sProdHead__count-of-bye,
+			.sProdHead__rew-link{
+				font-size: 12px;
+			}
+			.iconC-basketB{
+				font-size: 22px;
+			}
+		}
 		.review-wrap{
 			margin-top: 3px;
 		}

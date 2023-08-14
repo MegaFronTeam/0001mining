@@ -4,7 +4,7 @@ mixin footer()
 			+e.row.row.row-footer-lg
 				.col-sm-auto.d-none.d-md-block
 					+e.logo(href="#") 
-						include logo.svg
+						img(src="img/logo-footer.svg", alt="").res-i
 				.col-sm.col-6
 					.columns-2
 						ul
@@ -37,5 +37,8 @@ mixin footer()
 				.row.align-items-center
 					.col-auto.d-md-none
 						+e.logo(href="#") 
-							include logo.svg
-					.col 2023 © Mining Depot. Все права защищены. Не является публичной офертой.  #[a(href="#") Политика конфиденциальности]
+							img(src="img/logo-footer.svg", alt="").res-i
+					.col 
+						span 2023 © Mining Depot. Все права защищены. 
+						span Не является публичной офертой.  
+						a(href="#") Политика конфиденциальности

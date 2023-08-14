@@ -72,13 +72,16 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 .breadcrumb-slider--js{
-	margin-bottom: rem(20);
 	.splide__track{
 		overflow: visible;
 	}
 }
 .breadcrumb {
-	flex-wrap: nowrap;
+	margin-bottom: rem(20);
+	// flex-wrap: nowrap;
+	li{
+		margin-bottom: em(6);
+	}
   a{
     color: $secondary;
     border-bottom: 1px solid  ;

@@ -3,7 +3,8 @@ mixin headerBlock(img,h1,descr)
 	+b.headerBlock#headerBlock&attributes(attributes)
 		.container
 			+b.section-title
-				+img(`img/${img}.png`)
+				+e.img-wrap
+					+img(`img/${img}.png`).res-i
 				h1!= h1
 				p!= descr
 				a.btn.btn-white(data-fancybox data-type="ajax" href="modal/call.html") Оставьте заявку
