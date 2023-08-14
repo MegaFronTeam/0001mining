@@ -4,9 +4,10 @@
 	--sPB: #{rem(0)};
 	--sTPB: #{rem(38)};
 	h2{
-		font-family: $font-family-monospace;
-		font-size: rem(18);
-		font-weight: 600;
+		// font-family: $font-family-monospace;
+		// font-size: rem(18);
+		@include rfs(33px);
+		// font-weight: 600;
 	}
 	&__item{
 		margin-bottom: rem(35);

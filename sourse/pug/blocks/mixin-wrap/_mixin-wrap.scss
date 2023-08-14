@@ -137,6 +137,14 @@
 	.prod-tags__item{
 		margin-bottom: em(24);
 	}
+	&__btn{
+		width: rem(149);
+		height: rem(63);
+		img{
+			max-height: 90%;
+			@extend .res-i;
+		}
+	}
 }
 
 .page-prod{
