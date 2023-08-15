@@ -30,7 +30,7 @@
 		border-radius: 15px 15px 0px 15px;
 			@include media-breakpoint-down(sm){
 				border-radius: 15px;
-				background: #F2EFFE;
+				// background: #F2EFFE;
 			}
 	}
 	&__title{
@@ -48,8 +48,12 @@
 			padding: 33px 24px 14px 64px;
 		}
 		padding: 23px 14px 0px 24px;
+		background: #F2EFFE;
+			&:nth-child(1){
+				
+				border-radius: 15px 15px 0 0;
+			}
 		@include media-breakpoint-up(sm) {
-			background: #F2EFFE;
 
 			&:nth-child(1){
 				
@@ -67,7 +71,13 @@
 			padding-top: 20px;
 		}
 	}
-		
+		@include media-breakpoint-down(sm){
+				
+		&:nth-child(3){
+			
+			border-radius: 0 0 15px  15px ; 
+		}
+		}
 
 
 		// height: 100%;
@@ -81,6 +91,7 @@
 			@include media-breakpoint-down(sm){
 
 				background-color: #fff;
+				padding-left: 0;text-align: left;
 			}
 			@include media-breakpoint-up(sm){
 
@@ -93,13 +104,13 @@
 					border-radius: 15px 0 0 0;
 					background-color: #fff;
 				}
+				justify-content: center;
+				align-items: center;
+				// align-self: flex-end;
+				text-align: right;
 			}
 			position: relative;
 			// border-radius: 15px ;
-			justify-content: center;
-			align-items: center;
-			// align-self: flex-end;
-			text-align: right;
 		}
 	}
 	.btn{

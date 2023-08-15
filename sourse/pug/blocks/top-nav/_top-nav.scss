@@ -217,53 +217,61 @@
 }
 
 .logo{
-	display: inline-flex; 
-	@include roww(em(16px),0, m);
-	@include media-breakpoint-up(xxl) {
-		margin-right: 3px;
-	}
+	display: inline-block;
+	position: relative;
 	@include media-breakpoint-up(xl) {
-		--bs-gutter-x: #{em(24)};
-		font-size: 12px;
+		max-width: rem(299);
 	}
+	max-width: rem(150);
+	// @include media-breakpoint-up(xl) {
+	// top: em(4);
+	// display: inline-flex; 
+	// @include roww(em(16px),0, m);
+	// @include media-breakpoint-up(xxl) {
+	// 	margin-right: 3px;
+	// }
+	// @include media-breakpoint-up(xl) {
+	// 	--bs-gutter-x: #{em(24)};
+	// 	font-size: 12px;
+	// }
 	
-	@include media-breakpoint-down(sm) {
-		// margin-top: em(4);
-		position: relative;
-		top: em(4);
-	}
-	@include media-breakpoint-up(sm) {
+	// @include media-breakpoint-down(sm) {
+	// 	// margin-top: em(4);
+	// 	position: relative;
+	// 	top: em(4);
+	// }
+	// @include media-breakpoint-up(sm) {
 		
-		font-size: 10px;
-	}
+	// 	font-size: 10px;
+	// }
 	
-	font-size: 8px;
-	svg[width="48"]{
-		@include media-breakpoint-up(sm) {
-			width: em(48 * 1.34) !important;
-			height: em(34 * 1.34) !important;
-		}
-		width: em(48 * 1.24) !important;
-		height: em(34 * 1.24) !important;
-		// width: em(48 * 1.04) !important;
-		// height: em(34 * 1.04) !important;
-	}
-	font-weight: 300;
-	color: #757575;
-	line-height: 1;
-	height: 100%;
-	align-items: center;
-	svg{
-		flex: 0 0 auto;
-	}
-	&__title{
-		.iconC{
-			@include media-breakpoint-up(sm) {
+	// font-size: 8px;
+	// svg[width="48"]{
+	// 	@include media-breakpoint-up(sm) {
+	// 		width: em(48 * 1.34) !important;
+	// 		height: em(34 * 1.34) !important;
+	// 	}
+	// 	width: em(48 * 1.24) !important;
+	// 	height: em(34 * 1.24) !important;
+	// 	// width: em(48 * 1.04) !important;
+	// 	// height: em(34 * 1.04) !important;
+	// }
+	// font-weight: 300;
+	// color: #757575;
+	// line-height: 1;
+	// height: 100%;
+	// align-items: center;
+	// svg{
+	// 	flex: 0 0 auto;
+	// }
+	// &__title{
+	// 	.iconC{
+	// 		@include media-breakpoint-up(sm) {
 
-				font-size: em(22);
-			} 
-			font-size: em(19);
-			margin-bottom: em(5px);
-		}
-	}
+	// 			font-size: em(22);
+	// 		} 
+	// 		font-size: em(19);
+	// 		margin-bottom: em(5px);
+	// 	}
+	// }
 }
