@@ -99,17 +99,17 @@ class JSCCommon {
 				},
 				timeout: StoriesSpeed,
 			},
-			Images: {
-				content: (_ref, slide) => {
-					let rez = "<div class='img-wrap-with-progress'><div class='modal-progress'><div class='modal-progress__bar'></div></div>";
+			// Images: {
+			// 	content: (_ref, slide) => {
+			// 		let rez = "<div class='img-wrap-with-progress'><div class='modal-progress'><div class='modal-progress__bar'></div></div>";
 
-					rez += `<img src="${slide.src}" class="fancybox-image" alt="" />`;
+			// 		rez += `<img src="${slide.src}" class="fancybox-image" alt="" />`;
 
-					rez += "</div>";
+			// 		rez += "</div>";
 
-					return rez;
-				},
-			},
+			// 		return rez;
+			// 	},
+			// },
 		});    
 		
 		document.querySelectorAll(".modal-close-js").forEach(el => {

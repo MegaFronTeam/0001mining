@@ -643,32 +643,34 @@ h3{
 	.f-progress{
 		display: none !important;
 	}
-}
-
-.modal-progress{
-	position: absolute;
-	top: 26px;
-	left: 18px;
-	width: calc(100% - 36px);
-	height: 2px;
-	background-color: rgba(255, 255, 255, 0.5);
-	&__bar{
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-		background-color: #fff;
-		// background-color: red;
-		width: 100%;
-		transform-origin: left top;
-		transform: scaleX(0);
-		animation-fill-mode: both ;
+	.fancybox__content{
+		&::after,
+		&::before{
+			content: '';
+			position: absolute;
+			top: 26px;
+			left: 18px;
+			width: calc(100% - 36px);
+			height: 2px;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		&::after{ 
+			background-color: #fff;
+			// background-color: red; 
+			transform-origin: left top;
+			transform: scaleX(0);
+			animation-fill-mode: both ;
+		}
+	}
+	.modal-progress{
+		&__bar{
+		}
 	}
 }
 
+
 .is-selected{
-	.modal-progress__bar{
+	.fancybox__content::after{
 		animation: slideIn 7.5s linear ;
 	}
 }

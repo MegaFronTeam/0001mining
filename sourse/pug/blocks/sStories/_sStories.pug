@@ -13,13 +13,13 @@ mixin sStories(data)
 							+arrow2()
 							.splide__track
 								.splide__list#stories
-									mixin item(i,t)
+									mixin item(i,t, a=`img/y.jpg`)
 										+e.slide.splide__slide
-											+e.item.bg-wrap(href=`img/y.jpg` data-fancybox="stories").stories
+											+e.item.bg-wrap(href= a data-fancybox="stories").stories
 												+img(`img/story-${i}.jpg`,'bg').img-bg
 												p!= t
-									+item(`1`,`Как добраться до офиса`)
-									+item(`2`,`Как мы отправляем оборудование по регионам`)
+									+item(`1`,`Как добраться до офиса`, 'video/video-bg.mp4')
+									+item(`2`,`Как мы отправляем оборудование по регионам`,'https://www.youtube.com/watch?v=Nq5CR5mTgzA')
 									+item(`3`,`Видеопроверка для нашего клиента из регионов`)
 									+item(`4`,`Добро пожаловать в наш офис`)
 									+item(`5`,`Ситуация на рынке майнинга `)
